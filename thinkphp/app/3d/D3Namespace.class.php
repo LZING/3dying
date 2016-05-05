@@ -39,7 +39,56 @@ class D3Namespace {
        
         return DBMysqli::getInstance()->getAll($sql);
     }
-    
+
+    public static function showPageJson($limit = 12, $type = 0) {
+
+        $where    = 'del=0';
+        if ($type > 0) {
+            $where = '`type_id`=' . $type .' AND del=0';
+        }
+        $q = HttpNamespace::getGET('q', '');
+        if ($q) {
+            $where .= " AND `title` like '%".$q."%'";
+        }
+        $page     = (int)HttpNamespace::getGET('p', 1);
+        $page = $page >0 ? $page : 1;
+        $offset   = ($page-1) * $limit;
+        $orderTime    = HttpNamespace::getGET('time', '');
+        $readTime     = HttpNamespace::getGET('read', '');
+        $order = '';
+        $o = '';
+        $orderUrl = '';
+        $readUrl  = '';
+        if ($readTime == 'asc') {
+            $order = '`read` asc';
+            $readUrl = UrlNamespace::searchUrl($type, $q, $orderTime, 'desc');
+        } else{
+            if ($readTime == 'desc') {
+                $order = '`read` desc';
+            }
+            $readUrl = UrlNamespace::searchUrl($type, $q, $orderTime, 'asc');
+        }
+        if ($order) {
+            $o = ',';
+        }
+        if ($orderTime == 'asc') {
+            $order .= $o . 'id asc';
+            $orderUrl = UrlNamespace::searchUrl($type, $q, 'desc', '');
+        } else{
+            $order .= $o . 'id desc';
+            $orderUrl = UrlNamespace::searchUrl($type, $q, 'asc', '');
+        }
+        $sqlCount = "SELECT count(*) as count FROM `3d` WHERE {$where}";
+        $sql      = "SELECT * FROM `3d` WHERE {$where} ORDER BY ". $order ." LIMIT {$offset},{$limit}";
+
+        $num = DBMysqli::getInstance()->getRow($sqlCount);
+
+        $result[]   = DBMysqli::getInstance()->getAll($sql);
+        $result[] = $num['count'];
+
+        return $result;
+    }
+
     public static function showPage($limit = 12, $type = 0) {
 
         $where    = 'del=0';
@@ -50,7 +99,8 @@ class D3Namespace {
         if ($q) {
             $where .= " AND `title` like '%".$q."%'"; 
         }
-        $page     = HttpNamespace::getGET('p', 1);
+        $page     = (int)HttpNamespace::getGET('p', 1);
+        $page = $page >0 ? $page : 1;
         $offset   = ($page-1) * $limit;
         $orderTime    = HttpNamespace::getGET('time', '');
         $readTime     = HttpNamespace::getGET('read', '');
