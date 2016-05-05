@@ -1,0 +1,92 @@
+
+.celltable {
+	cursor: pointer;
+	z-index: -1;
+
+	.celltable-title {
+		height: 40%;
+		overflow: hidden;
+		line-height: 2.3em;
+		background: #03B0ED;
+		opacity: 0;
+	}
+
+	.black {
+		@baseColor: #03B0ED;
+		th {
+			background: @baseColor;
+		}
+		td {
+			//border: 1px solid @baseColor;
+		}
+
+		//border: 1px solid @baseColor;
+		background: #000;
+		color: #FFF;
+	}
+
+	.white {
+		@baseColor: #03B0ED;
+		th {
+			background: @baseColor;
+		}
+		td {
+			//border: 1px solid @baseColor;
+		}
+
+		//border: 1px solid @baseColor;
+		background: #FFF;
+		color: #000;
+	}
+
+	table {
+		@baseColor: #03B0ED;
+		height: 60%;
+		width: 100%;
+		cursor: pointer;
+		//border-right: 1px solid @baseColor;
+
+		tr {
+			height: 30%;
+
+			&:first-child {
+				//height: 40%;
+				//cursor: pointer;
+			}
+
+			th {
+				color: #FFF;
+				text-align: center;
+				word-break: break-all;
+				overflow: auto;
+			}
+
+			td {
+				width: 60px;
+				cursor: pointer;
+
+				span {
+					margin-left: 20px;
+					font-weight: bold;
+				}
+			}
+
+			&:last-child {
+				td {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.alert {
+		background: red;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		color: #FFF;
+	}
+}

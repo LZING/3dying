@@ -1,0 +1,71 @@
+<div class="tabbable tabbable-custom">
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<a data-toggle="tab" href="#tab_6_1">图标库</a>
+		</li>
+		<li>
+			<a data-toggle="tab" href="#tab_6_2">配置信息</a>
+		</li>
+        <li>
+            <a data-toggle="tab" href="#tab_6_4">仪表盘</a>
+        </li>
+
+	</ul>
+
+	<div class="tab-content">
+		<div id="tab_6_1" class="tab-pane active">
+			<div class="clearfix">
+				<button id="btn-tree-style" class="btn btn-default" type="button">
+					树形样式
+				</button>
+				<button id="btn-tile-style" class="btn btn-success" type="button">
+					平铺样式
+				</button>
+			</div>
+			<div class="{{treeElementClassName}}"></div>
+			<div id="customIconArea" class="customIconArea clear"></div>
+			<div id="{{baseGraphID}}"></div>
+		</div>
+
+		<div id="tab_6_2" class="tab-pane">
+			<div id="ciInfo">
+				<div>
+					<select name="a"  class="treeText"  style="width:230px;"></select>
+				</div>
+				<p>
+					<select name="b"  class="treeText"  style="width:230px;"></select>
+				</p>
+				<p>
+					<input type="text"  name="c" class="treeText"  style="width:230px;"/>
+				</p>
+				<p>
+					<input type="button"  value="查询" class="btn btn-success "  />
+				</p>
+				<div class="configinfo-table"></div>
+				<div class="configinfo-page clear"></div>
+			</div>
+		</div>
+
+        <div id="tab_6_4" class="tab-pane">
+            <div style="padding: 5px;height: 100px;">
+                <div id="chart1" charttype = "1" chartname="饼图" style="padding:7px;float: left;cursor: pointer;">
+                    <img style="width: 40px;height: 40px;" src="images/chart/piechart.png">
+                    <div style="width: 100%;text-align: center;margin-top: 2px;">饼图</div>
+                </div>
+                <div id="chart2" charttype = "3" chartname="趋势图" style="padding:7px;float: left;cursor: pointer;">
+                    <img style="width: 40px;height: 40px;" src="images/chart/linechart.png">
+                    <div style="width: 100%;text-align: center;margin-top: 2px;">趋势图</div>
+                </div>
+                <div id="chart3" charttype = "2" chartname="柱状图" style="padding:7px;float: left;cursor: pointer;">
+                    <img style="width: 40px;height: 40px;" src="images/chart/barchart.png">
+                    <div style="width: 100%;text-align: center;margin-top: 2px;">柱状图</div>
+                </div>
+                <div id="chart4" charttype = "4" chartname="面积图" style="padding:7px;float: left;cursor: pointer;">
+                    <img style="width: 40px;height: 40px;" src="images/chart/areachart.png">
+                    <div style="width: 100%;text-align: center;margin-top: 2px;">面积图</div>
+                </div>
+            </div>
+        </div>
+
+	</div>
+</div>

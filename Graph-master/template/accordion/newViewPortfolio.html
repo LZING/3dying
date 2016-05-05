@@ -1,0 +1,167 @@
+<div class="tabbable-custom nav-justified">
+	<ul class="nav nav-tabs nav-justified">
+		<li class="active">
+			<a href="#tab_3_1_1" data-toggle="tab">
+				组合视图列表</a>
+		</li>
+		<li>
+			<a href="#tab_3_1_2" data-toggle="tab">
+				创建组合视图</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="tab_3_1_1">
+			<div class="tasks-widget">
+				<ul class="task-list" id="viewPortfolioList">
+					{{#each configItems}}
+					<li data-viewname="{{@key}}">
+						<div class="task-title"><button class="btn btn-link">{{@key}}</button> {{createDate}}</div>
+						<div class="task-config">
+							<div class="btn-group">
+								<button class="btn btn-xs btn-danger remove">
+									<i class="fa fa-trash"></i>
+								</button>
+							</div>
+						</div>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+
+		<div class="tab-pane" id="tab_3_1_2">
+
+			<div class="form-horizontal" role="form">
+				<div class="form-body">
+
+					<div class="form-group">
+						<div class="col-md-12">
+							<button class="btn btn-primary btn-block" id="importconfig"><i class="fa fa-info"></i> 导入配置</button>
+						</div>
+					</div>
+
+					<div class="form-group hide" id="import">
+						<label class="col-md-{{labelWidth}} control-label">选择配置</label>
+						<div class="col-md-{{rightWidth}}">
+							<select class="form-control">
+								<option value="">选择需要导入的配置</option>
+								{{#each configItems}}
+									<option value="{{@key}}">{{@key}}</option>
+								{{/each}}
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-{{labelWidth}} control-label">视图名称</label>
+						<div class="col-md-{{rightWidth}}">
+							<input class="form-control" type="text" name="viewName" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-{{labelWidth}} control-label">工具条大小</label>
+						<div class="col-md-{{rightWidth}}" id="toolbarSize">
+
+							<div class="input-group">
+								<span class="input-group-addon bootstrap-touchspin-postfix">px</span>
+								<input type="text" class="spinner-input form-control" name="toolbarSize" maxlength="3" readonly="">
+								<div class="spinner-buttons input-group-btn btn-group-vertical">
+									<button type="button" class="btn spinner-up btn-xs blue">
+										<i class="fa fa-angle-up"></i>
+									</button>
+									<button type="button" class="btn spinner-down btn-xs blue">
+										<i class="fa fa-angle-down"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-md-{{labelWidth}} control-label">焦点图比例</label>
+						<div class="col-md-{{rightWidth}}" id="outLineSize">
+							<div class="input-group">
+								<span class="input-group-addon bootstrap-touchspin-postfix">%</span>
+								<input type="text" class="spinner-input form-control" name="outLineSize" maxlength="3" readonly data-isPercentage="1" />
+								<div class="spinner-buttons input-group-btn btn-group-vertical">
+									<button type="button" class="btn spinner-up btn-xs blue">
+										<i class="fa fa-angle-up"></i>
+									</button>
+									<button type="button" class="btn spinner-down btn-xs blue">
+										<i class="fa fa-angle-down"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-{{labelWidth}} control-label">布局</label>
+						<div class="col-md-{{rightWidth}}">
+							<select class="form-control" name="layout">
+								<option value="top">上</option>
+								<option value="right">右</option>
+								<option value="bottom">下</option>
+								<option value="left">左</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-{{labelWidth}} control-label">最大个数</label>
+						<div class="col-md-{{rightWidth}}">
+							<select class="form-control" name="count">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4" selected>4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+							</select>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-md-{{labelWidth}} control-label">顶部颜色</label>
+						<div class="col-md-{{rightWidth}}">
+							<input class="form-control" type="text" name="toolbarBgColor" value="#000000" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-{{labelWidth}} control-label">按钮颜色</label>
+						<div class="col-md-{{rightWidth}}">
+							<input class="form-control" type="text" name="btnColor" value="#ffffff" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-{{labelWidth}} control-label">视图列表</label>
+						<div class="col-md-{{rightWidth}}">
+							<button class="btn btn-primary btn-block" id="addViewPortfolio"><i class="fa fa-plus"></i> 添加视图</button>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-md-11 col-md-offset-1 tasks-widget">
+							<ul class="task-list" id="addViewProfolioList">
+							</ul>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-md-12">
+							<button class="btn btn-success btn-block" id="saveViewPortfolio"><i class="fa fa-save"></i> 保存视图</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

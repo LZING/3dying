@@ -1,0 +1,129 @@
+<div id="{{id}}" class="tabbable tabbable-custom">
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<a data-toggle="tab" href="#tab_1_1">视图列表</a>
+		</li>
+		<li>
+			<a data-toggle="tab" href="#tab_1_2">创建视图</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+
+		<div id="tab_1_1" class="tab-pane active">
+			<ul style="margin-left:30px;" class="com-view-list"></ul>
+		</div>
+
+		<div id="tab_1_2" class="tab-pane">
+
+
+			<div class="row mt10">
+
+				<span>
+					<label class="control-label labelText">导入配置</label><input title="导入配置" type="button"
+																			  class="importconfig btn btn-default"
+																			  value="选择配置"/>
+				</span>
+			</div>
+
+			<div class="row import"></div>
+
+			<div class="row">
+
+				<span>
+					<label class="control-label labelText">视图名称</label><input title="视图名称" type="text" class="treeText"
+																			  name="viewName"/>
+				</span>
+			</div>
+
+			<div class="row">
+
+				<span>
+					<label class="control-label labelText">工具条大小</label><input title="工具条大小" type="number"
+																			   class="treeText" range="50-300" step="10"
+																			   min="50" max="300" name="toolbarSize"/>
+				</span>
+			</div>
+
+			<div class="row">
+
+				<span>
+					<label class="control-label labelText">焦点图比例(%)</label><input title="焦点图比例" type="number"
+																				  class="treeText" isPercentage="1"
+																				  range="10-90" step="10" min="10"
+																				  max="90" name="outLineSize"/>
+				</span>
+			</div>
+
+			<div class="row">
+
+				<label class="control-label labelText">布局</label><select title="布局" name="layout" class="treeText">
+				<option value="top">上</option>
+				<option value="right">右</option>
+				<option value="bottom">下</option>
+				<option value="left">左</option>
+			</select>
+			</div>
+
+			<div class="row">
+
+				<span>
+					<label class="control-label labelText">最大显示个数</label><select title="最大显示个数" type="number"
+																				 name="count" class="treeText">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</select> </span>
+			</div>
+
+			<div class="row">
+
+				<span>
+					<label class="control-label labelText">顶部颜色</label><input title="顶部颜色" type="color"
+																			  name="toolbarBgColor"/>
+				</span>
+			</div>
+
+			<div class="row">
+
+				<span>
+					<label class="control-label labelText">翻页按钮颜色</label><input title="翻页按钮颜色" type="color"
+																				name="btnColor"/>
+				</span>
+			</div>
+
+			<div class="row">
+				<div class="head">
+
+					<span>
+						<label class="control-label labelText">视图列表</label><input title="视图列表" type="button"
+																				  class="addview btn btn-default"
+																				  value="+ 添加视图"/>
+					</span>
+				</div>
+				<ol class="list">
+					<li>
+						<span class="path">应用系统-交易系统</span>
+						<span class="view">大机系统架构</span>
+						<span><a class="removeBtn" href="javascript:void(0)">RM</a></span>
+					</li>
+					<li>
+						<span class="path">应用系统-交易系统</span>
+						<span class="view">大机系统架构</span>
+						<span><a class="removeBtn" href="javascript:void(0)">RM</a></span>
+					</li>
+				</ol>
+			</div>
+
+			<div class="row btnbox" style="width: 90%;">
+				<input type="button" class="btn green btn-block" value="保存"/>
+			</div>
+
+
+		</div>
+
+	</div>
+</div>

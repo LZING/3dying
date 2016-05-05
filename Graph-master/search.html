@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>打开视图</title>
+		<!--[if lt IE 9]><script>window.location.href="browser-support.html";</script><![endif]-->
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<!--
+		<link href="plugins/bootstrap/assets/css2/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		-->
+		<style type="text/css">
+			body {
+				background: #FFF !important;
+				overflow-y : auto !important;
+			}
+			.search-row-2 {
+				padding: 10px;
+				margin-top: 40px;
+			}
+			.search-row iframe {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+
+		<script type="text/javascript" src="js/include.js"></script>
+		<script type="text/javascript" src="js/view/search.js"></script>
+
+	</head>
+	<body style="background:#FFF !important;">
+		<div class="header">
+		</div>
+
+		<div style="width: 300px; height: 32px; position: absolute; left: 0; right: 0;  top: 5px; margin:auto; z-index: 9999;">
+			<div class="input-group">
+				<input type="text" name="searchCi" placeholder="请输入搜索内容"  style="height: 31px;" class="form-control input-sm"/>
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">搜索 <span class="caret"></span></button>
+					<ul class="dropdown-menu dropdown-menu-right" role="menu">
+						<li><a href="javascript:;" id="searchci">搜索CI</a></li>
+						<li><a href="javascript:;" id="searchview">搜索视图</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="search-row search-row-2 ">
+			<div class="row-fluid">
+				<div class="span12 sch-mian">
+					<div class="portlet-body" id="search_result"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

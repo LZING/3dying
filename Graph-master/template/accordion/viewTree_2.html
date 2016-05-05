@@ -1,0 +1,11 @@
+{{#each items}}
+<div style="display: block;" class="tree-item tooltips" data-placement="bottom"
+data-html="true" data-original-title="Last update<br />{{time}}">
+    <i class="tree-dot"></i>
+    <div class="viewName tree-item-name" viewid="{{_id_}}" cateid="{{_categoryId_}}" neo4jid="{{_neo4jid_}}">
+        <i class="fa fa-file"></i>
+        {{name}}
+    </div>
+	<div class="version tree-item-name">v{{version}}</div>
+</div>
+{{/each}}

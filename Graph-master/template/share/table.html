@@ -1,0 +1,22 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th width="10%"><input type="checkbox" name="all" class="treeText" /></th>
+			<th width="40%">分类</th>
+			<th width="40%">标识</th>
+		</tr>
+	</thead>
+	<tbody>
+	{{#each list}}
+	{{#isEven @index}}
+	<tr gid="{{_neo4jid_}}" gname="{{_name_}}" class="even">
+	{{else}}
+	<tr gid="{{_neo4jid_}}" gname="{{_name_}}" class="odd">
+	{{/isEven}}
+		<td><input type="checkbox" class="treeText"/></td>
+		<td>{{_category_}}</td>
+		<td>{{_name_}}</td>
+	</tr>
+	{{/each}}
+	</tbody>
+</table>

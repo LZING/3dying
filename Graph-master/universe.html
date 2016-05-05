@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<script src="plugins/threejs/three.js"></script>
+	<script src="plugins/threejs/OrbitControls.js"></script>
+	<script src="plugins/threejs/stats.min.js"></script>
+	<script src="plugins/threejs/THREEx.ContainerResize.js"></script>
+	<script src="plugins/threejs/threex.dynamictexture.js"></script>
+	<script src="font/lisu_regular.typeface.js"></script>
+	<script src="plugins/jquery/jquery-2.1.1.min.js"></script>
+	<script src="js/Universe.js"></script>
+	<script>
+		var data = null;
+		var parentwin = window.parent;
+		window.onmessage=function(e){
+			universe = new Universe($("#WebGL"));
+			universe.addLayer(e.data);
+		};
+	</script>
+</head>
+<body>
+	<div id="WebGL" style="width: 100%; height: 700px;position: relative;"></div>
+</body>
+</html>

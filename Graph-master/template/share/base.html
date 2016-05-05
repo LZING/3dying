@@ -1,0 +1,67 @@
+<div class="tabbable tabbable-custom">
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<a data-toggle="tab" href="#tab_8_1">方向</a>
+		</li>
+		<li>
+			<a data-toggle="tab" href="#tab_8_2">分类</a>
+		</li>
+		<li>
+			<a data-toggle="tab" href="#tab_8_3">关系</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div id="tab_8_1" class="tab-pane active">
+			<div class="row">
+				<div class="col-md-6">
+					<label>向上</label>
+					<select name="depth-up" class="form-control">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+					</select>
+				</div>
+				<div class="col-md-6">
+					<label>向下</label>
+					<select name="depth-down" class="form-control">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div id="tab_8_2" class="tab-pane">
+			<div class="row">
+				<div class="col-md-4" id="myCateTree">{{{ciHtml}}}</div>
+				<div class="col-md-8" id="addCiList"></div>
+			</div>
+
+		</div>
+		<div id="tab_8_3" class="tab-pane">
+			{{#each rslist}}
+			<div class="row" style="margin-bottom: 10px;">
+				<div class="col-md-5 col-md-offset-1">{{name}}</div>
+				<div class="col-md-5">
+					<span></span> <button rsname="{{name}}" class="btn btn-xs btn-danger selected">取消</button>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+</div>

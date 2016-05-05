@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Outline</title>
+		<!--[if lt IE 9]><script>window.location.href="browser-support.html";</script><![endif]-->
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<script type="text/javascript" src="js/include.js"></script>
+		<script type="text/javascript">
+		var graph = graph || {};
+		var oData = oData || null;
+		
+		graph.onload = function(){
+			$(document.body).width($(window).width());
+			$(document.body).height($(window).height());
+			graph.openChild = {};
+			
+			if(oData){
+				var app = new window.App(oData.list, document.body, oData.dict);
+				
+				if(oData.cell){
+					initSearch(app.graph, oData.cell);
+				}
+			}
+		};
+		
+		window.addEventListener("message",function(ev){
+			oData = {
+				list: ev.data.list,
+				dict: ev.data.dict,
+				cell: ev.data.cell
+			};
+		});
+		
+		var initSearch = function(graphs, cell){
+			var create;
+
+			create = function(graph){
+				var result,
+					oSe;
+
+				oSe = Search({graph : graph});
+				result = oSe.soCell(cell);
+				oSe.cellDelHighlighter();
+				oSe.info();
+				oSe.cellAddHighlighter(result);
+			};
+			
+			for(i=0; i<graphs.length; i++){
+				create(graphs[i].graph);
+			}
+		};
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

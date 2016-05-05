@@ -1,0 +1,205 @@
+.toolbaraa {
+  background: #FFF;
+}
+.toolbaraa .link-box {
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.toolbaraa .link-box a {
+  color: #666;
+  margin: 0 6px;
+}
+.toolbaraa .top-search {
+  width: 80px;
+}
+.back-top {
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+}
+a,
+h2,
+h3,
+h1,
+p,
+body {
+  font-family: "Microsoft YaHei" !important;
+}
+body {
+  overflow: auto !important;
+}
+.header {
+  background: #434343 !important;
+}
+.menus .item-menu {
+  overflow: hidden;
+  height: 60px;
+  line-height: 60px;
+  box-sizing: border-box;
+  border-top: 3px solid #efefef;
+  text-align: center;
+}
+.menus .item-menu a {
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  color: #333;
+  font-family: "微软雅黑";
+  text-decoration: none;
+  font-size: 16px;
+}
+.menus .ok,
+.menus .item-menu:hover {
+  background: #FFF;
+  border-top: 3px solid #7bc0fb;
+  text-decoration: no-underline;
+}
+.focus {
+  position: relative;
+}
+.focus .hidead {
+  height: 100%;
+  padding: 40px 0;
+  background: #FFF;
+  position: absolute;
+  z-index: 9999;
+  left: 15px;
+  width: 100%;
+  top: -2px;
+  display: none;
+}
+.focus .hidead .aditem {
+  box-sizing: border-box;
+  border-right: 1px solid #EFEFEF;
+  opacity: 1;
+  height: 100%;
+}
+.focus .hidead .aditem:last-child {
+  border-right: none;
+}
+.focus .hidead .aditem a {
+  text-decoration: none;
+  font-size: 16px;
+}
+.focus .hidead .aditem:hover {
+  opacity: 0.8;
+}
+.computer {
+  background: #FFF;
+  padding: 150px 0;
+}
+.computer p {
+  font-size: 16px;
+}
+.computer .items-group {
+  margin-left: 30px;
+}
+.computer .items-group .items-computer {
+  width: 200px;
+  height: 39px;
+  text-align: center;
+  line-height: 39px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.computer .items-group .items-computer .itemstext {
+  color: #fff;
+  height: 100%;
+  display: block;
+  width: 180px;
+  background: #909090;
+  float: left;
+  border-radius: 5px !important;
+}
+.computer .items-group .items-computer .hovericon {
+  height: 100%;
+  display: block;
+  width: 20px;
+  display: none;
+  background: url(../../images/btn_la.png) no-repeat center;
+  float: left;
+  margin-left: -1px;
+}
+.computer .items-group .items-computer:hover .hovericon,
+.computer .items-group .ok .hovericon {
+  display: block;
+}
+.computer .items-group .items-computer:hover .itemstext,
+.computer .items-group .ok .itemstext {
+  background: #7CC0FA;
+  border-radius: 5px 0 0 5px !important;
+}
+.box3 {
+  position: relative;
+}
+.box3 .box-center {
+  background: #FFF;
+  border: 1px solid #999;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+}
+.box3 .box-center img {
+  margin: 40px auto;
+}
+.box3 .box-center p {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #2A79A1;
+}
+.box3 .box3-first {
+  height: 407px;
+  background-image: url(../../images/img_mid_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box3 .box3-first .box-main {
+  position: relative;
+  top: 50%;
+  width: 50%;
+  margin: 0 auto;
+}
+.box3 .box3-btns a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  opacity: 1;
+}
+.box3 .box3-btns a img {
+  margin: 150px auto 20px;
+}
+.box3 .box3-btns a p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.box3 .box3-btns a:hover {
+  transition: opacity 200;
+  -webkit-transition: opacity 200;
+  -moz-transition: opacity 200;
+  opacity: 0.8;
+}
+.footer {
+  margin-top: 60px;
+  background: #434343;
+}
+.footer .pfooter {
+  background: url(../../images/footer_background.png) no-repeat;
+  padding: 50px 0;
+}
+.footer .pfooter li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+.footer .pfooter li a {
+  color: #d9d9d9;
+  font-size: 14px;
+}
+.footer .pfooter .footer-title {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 18px;
+}

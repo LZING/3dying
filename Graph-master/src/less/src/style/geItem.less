@@ -1,0 +1,30 @@
+
+
+.geItem-box {
+	border: 1px dashed #cecece;
+	padding: 5px 5px 12px;
+
+	.geItem {
+
+		@animateTime:0.1s;
+
+		float: left;
+
+		background-position: 50% 50%;
+		background-repeat: no-repeat !important;
+		border: 1px solid transparent;
+		border-radius: 2px !important;
+		display: inline-block;
+		vertical-align: top !important;
+
+		transition: all @animateTime ease-in-out 0s;
+		-webkit-transition: all @animateTime ease-in-out 0s;
+		-moz-transition: all @animateTime ease-in-out 0s;
+		-ms-transition: all @animateTime ease-in-out 0s;
+		-o-transition: all @animateTime ease-in-out 0s;
+
+		&:hover {
+			border: 1px solid gray !important;
+		}
+	}
+}

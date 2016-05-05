@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>打印啦立体照片</title>
+    <meta name="Keywords" content="打印啦,3D模型下载,STL模型下载" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <script type="text/javascript">
+            var BASE_URL = '';
+            var BASE_SCRIPT = '/index.php';
+            var USER = {};
+                                USER.ID = 0;
+                        USER.loginUrl = "/site/login.html?returnUrl=http%3A%2F%2Fwww.dayin.la%2Fapps%2Fphoto.html";
+    </script>
+    
+    <link rel="stylesheet" href="/msui/sm/0.5.8/css/sm.min.css">
+    <link rel="stylesheet" href="/themes/mobile/css/app.css">
+    <script type='text/javascript' src='/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    
+</head>
+
+<body class="">
+    
+<div class="page" style="background: #a3e0d0;">
+    <div class="apps-draw-top clearfix" id="draw-top">
+        <div class="apps-draw-return">
+            <a class="back apps-draw-red" href="/apps/index.html"><img src="/themes/mobile/images/app/draw-icon-return.png"/></a>
+        </div>
+        <div class="apps-draw-line"></div>
+        <ul class="apps-draw-topleft clearfix">
+            <li id="JsTextInput" class="apps-draw-photo apps-file"><img src="/themes/mobile/images/app/photo-icon.png"/><input class="fileUpload" type="file"></li>
+            <li id="JsHeight" class="apps-draw-orange cancel"><img src="/themes/mobile/images/app/iconfont-zifugaodu.png"/></li>
+            <li id="JsBorder" class="apps-draw-green next"><img src="/themes/mobile/images/app/draw-icon-rect.png"/></li>
+            <li id="JsCurve" class="apps-draw-red clearContext"><img src="/themes/mobile/images/app/draw-icon-cirle.png"/></li>
+        </ul>
+        <div class="apps-draw-line"></div>
+        <div class="apps-draw-topright">
+            <div class="apps-draw-toprightin">
+                <a id="JsPrint" href="#" data-url="/account/model/uploadModel.html?type=5" class="apps-draw-go"><img src="/themes/mobile/images/app/draw-icon-go.png"/></a>
+            </div>
+        </div>
+    </div>
+    <ul class="apps-toolbar apps-toolbar-left">
+        <li id="JsCloseBtn" style="display: none;"><span class="icon icon-check"></span></li>
+    </ul>
+    <div class="content">
+        <div class="apps-center">
+            <div class="apps-file">
+                <a class="apps-photo-btn"><i class="am-icon-cloud-upload"></i> 请选择照片</a>
+                <input class="fileUpload" type="file">
+            </div>
+        </div>
+        <div id="container" class="canvas_container"></div>
+        <div class="apps-toolbar" id="progressBox" style="display:none">
+            <progress id="progressBar" max="100" value="0"></progress>
+            <div id="progressState" > </div>
+        </div>
+        <div class="apps-hide" id="prevImage"></div>
+<!--        <div class="photo-box">
+            
+            <button class="photo-box-course"><i class="ui-icon-info-block"></i></button>
+        </div>
+        <div class="ui-dialog photo-dialog">
+            <div class="ui-dialog-cnt photo-dialog-context">
+                <div class="ui-slider">
+                    <ul class="ui-slider-content" style="width: 300%;">
+                        <li><span style="background-image:url(http://placeholder.qiniudn.com/640x200)">AAA</span></li>
+                        <li><span style="background-image:url(http://placeholder.qiniudn.com/640x200)">BBB</span></li>
+                        <li><span style="background-image:url(http://placeholder.qiniudn.com/640x200)">CCC</span></li>
+                    </ul>
+                </div>
+                <i class="ui-dialog-close" data-role="button" style="z-index: 2;"></i>
+            </div>        
+        </div>-->
+    </div>
+    <div class="apps-range-bar">
+        <div id="JsHeightBar" style="visibility: hidden;"><input id="JsHeightRange" type="text"/></div>
+    </div>
+    <div class="apps-range-bar">
+        <div id="JsBorderBar" style="visibility: hidden;"><input id="JsBorderRange" type="text"/></div>
+    </div>
+     <div class="apps-range-bar">
+        <div id="JsCurveBar" style="visibility: hidden;"><input id="JsCurveRange" type="text"/></div>
+    </div>
+</div>
+<!--<script>
+    $(".photo-box-course").click(function(){
+        $(".ui-dialog").dialog("show");
+    });
+    (function(){
+        var slider = new fz.Scroll('.ui-slider', {
+            role: 'slider',
+            indicator: true,
+            autoplay: false,
+            interval: 3000,
+            duration:false
+        });
+    })();
+</script>-->
+<script></script>    <div class="popup popup-index">
+        <form class="apps-index-form" action="/app/login.html" method="post">
+            <img src="/themes/mobile/images/app/index-form.png" alt=""/>
+            <h3>登录</h3>
+            <input type="text" name="username" class="input-xfat" placeholder="请输入账号">
+            <input type="password" name="password" style="border-top:none" placeholder="请输入密码">
+            <div class="row">
+                <div class="col-40">
+                    <button type="submit" class="button button-fill apps-index-submit" id='js-apps-login'>登录</button>
+                </div>
+                <div class="col-60">
+                    <a class="external apps-index-rigister" href="/site/registerMobile.html">没有账号点击这里注册</a>                </div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+    $(function () {
+        $(document).on('click', '#js-apps-login', function () {
+            $.ajax({
+                url: $(this).parents('form').attr('action'),
+                type: 'POST',
+                dataType:'json',
+                data: $(this).parents('form').serialize(),
+                cache: false,
+                success: function (json) {
+                    if(json.errorCode>0){
+                        alert(json.msg);
+                    }else{
+                        window.location.reload();
+                    }                    
+                },
+                error: function (XHR) {
+                    alert(XHR.responseText);
+                }
+            });
+            return false;
+        });
+    });
+</script>
+    <script type='text/javascript' src='/js/threejs/three.71.min.js'></script>
+    <script type='text/javascript' src='/js/threejs/iceman3d-core.js'></script>
+    <script type='text/javascript' src='/msui/sm/0.5.8/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='/static/range.min.js'></script>
+    <script type='text/javascript' src='/themes/mobile/js/app.tools.js'></script>
+<script type="text/javascript" src="/js/threejs/NormalControls.js"></script>
+<script type="text/javascript" src="/themes/mobile/js/AppPhotoInit.js?_t=20121009"></script>
+</body>
+</html>

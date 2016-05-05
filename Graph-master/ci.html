@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>基础设施入口</title>
+	<!--[if lt IE 9]><script>window.location.href="browser-support.html";</script><![endif]-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="shortcut icon" href="../favicon.ico" />
+	<script type="text/javascript" src="js/include.js"></script>
+	<script type="text/javascript" src="js/view/ci.js"></script>
+	<style>
+		body {background: #FFF !important;}
+	</style>
+</head>
+<body>
+<div class="header">
+</div>
+<div id="main" class="clear">
+	<div class="container">
+		<div class="page-header">
+			<h2>基础设施状态可视</h2>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3">
+				<div class="form-group">
+					<label>分类选择</label>
+					<select id="cate" class="form-control"></select>
+				</div>
+
+				<div class="form-group">
+					<label>属性选择</label>
+					<select id="attr" class="form-control"></select>
+				</div>
+
+				<div class="form-group">
+					<label>过滤条件</label>
+					<input  class="form-control" id="filter" />
+				</div>
+
+				<div class="form-group clearfix">
+					<button id="searchBtn" class="btn btn-primary pull-right">查询</button>
+				</div>
+			</div>
+
+			<div class="col-md-9" id="col2">
+
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

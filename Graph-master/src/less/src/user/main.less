@@ -1,0 +1,157 @@
+
+@marginWidth: 10px;
+@boxHeight: 350px;
+@boxWidth: e("calc(33% - 10px)");
+@boxBorderWidth: 1px;
+@radius: 5px;
+@tipBgColor: #DFDFDF;
+@tipHeight: 70px;
+@paddingWidth: 20px;
+@toolTimes: 0.5s;
+@graphTimes: 3s;
+@tipHoverBgColor: #F2DEDE;
+@dialogBaseColor: #5BC0DE;
+
+body {
+	overflow: auto !important;
+}
+
+#myViews,
+#subViews,
+.panel-body {
+	background: #FFF;
+}
+
+.rightmain {
+	right:0;
+	top: 10px;
+	max-height: 95%;
+
+	.panel-body {
+		overflow-y: auto;
+	}
+
+	.echart {
+		height: 300px;
+		border: 1px solid #ed9c28;
+	}
+}
+
+.graphbox {
+	height: @boxHeight;
+	width: @boxWidth;
+	border:@boxBorderWidth solid @tipBgColor;
+	//border-radius: @radius !important;
+	float: left;
+	margin:0 @marginWidth @marginWidth 0;
+	position: relative;
+	background: #FFF;
+	overflow: hidden;
+
+	.graphcontainer {
+		height: @boxHeight - @tipHeight;
+	}
+
+	.mask {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	.tips {
+		background: @tipBgColor;
+		height: @tipHeight;
+		line-height: @tipHeight;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		font-size: 16px;
+		z-index: 22;
+		//color: #FFF;
+
+		.info {
+			padding: 0 @paddingWidth;
+		}
+
+		.tools {
+			position: absolute;
+			top: (@tipHeight - 32px) / 2;
+			opacity: 0;
+			right: 10px;
+			transition: opacity @toolTimes;
+			-webkit-transition: opacity @toolTimes;
+			-moz-transition: opacity @toolTimes;
+		}
+
+	}
+
+	&:hover {
+		border:@boxBorderWidth solid @tipHoverBgColor;
+
+		.tools {
+			opacity: 1;
+		}
+
+		.tips {
+			background: @tipHoverBgColor
+		}
+	}
+}
+
+.sueeGraph {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	border: 2px solid @dialogBaseColor;
+	background: #FFF;
+
+	.graphcontainer {
+		width: 100%;
+		height: 100%;
+	}
+
+	.tools {
+		position: absolute;
+		right: 0;
+		top: -50px;
+		z-index:9;
+	}
+}
+
+.sueeHide {
+	top: -2000px;
+	opacity: 0;
+}
+
+.sueeShow {
+	top: 0;
+	opacity: 1;
+
+	.tools {
+		top: 0;
+		right: 0;
+		transition: top @toolTimes;
+		-webkit-transition: top @toolTimes;
+		-moz-transition: top @toolTimes;
+	}
+
+	.info {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		font-size: 16px;
+		padding: 10px;
+		background: @dialogBaseColor;
+		color: #FFF;
+		opacity: 0.8;
+	}
+}

@@ -1,0 +1,263 @@
+
+@toolbarHeight: 60px;
+@menuHeight: 30px;
+@paddingSize: 10px;
+@menuBorderColor: #7BC0FB;
+@hiColor: #EFEFEF;
+
+.toolbaraa {
+	background: #FFF;
+
+	.link-box {
+		margin-top: 20px;margin-left: 40px;
+
+		a {
+			color: #666;
+			margin: 0 6px;
+		}
+	}
+	.top-search {
+		width: 80px;
+	}
+}
+
+.back-top {
+	position: fixed;
+	right: 10px;
+	bottom: 50px;
+}
+
+a,
+h2,
+h3,
+h1,
+p,
+body {
+	font-family: "Microsoft YaHei" !important;
+}
+
+body {
+	overflow: auto !important;
+}
+
+.header {
+	background: #434343 !important;
+}
+
+.menus {
+	.item-menu {
+		overflow: hidden;
+		height: @toolbarHeight;
+		line-height: @toolbarHeight;
+		box-sizing: border-box;
+		border-top: 3px solid @hiColor;
+		text-align: center;
+
+		a {
+			overflow: hidden;
+			//height: 100%
+			width: 100%;
+			text-align: center;
+			font-size: 16px;
+			color: #333;
+			font-family: "微软雅黑";
+			//border-right: 1px solid @hiColor;
+			//border-left: 1px solid @hiColor;
+			text-decoration:none;
+			font-size: 16px;
+
+		}
+	}
+
+	.ok,
+	.item-menu:hover {
+		background: #FFF;
+		border-top: 3px solid @menuBorderColor;
+		text-decoration: no-underline;
+	}
+}
+.focus {
+	position: relative;
+	.hidead {
+		height: 100%;
+		padding: 40px 0;
+		background: #FFF;
+		position: absolute;
+		z-index: 9999;
+		left: 15px;
+		width:100%;
+		top: -2px;
+		display: none;
+
+		.aditem {
+			box-sizing: border-box;
+			border-right: 1px solid #EFEFEF;
+			opacity: 1;
+			height: 100%;
+
+			&:last-child {
+				border-right: none;
+			}
+
+			a {
+				text-decoration: none;
+				font-size: 16px;
+			}
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+}
+
+.computer {
+	background: #FFF;
+	padding:150px 0;
+
+	p {
+		font-size: 16px;
+	}
+
+	@baseHeight: 39px;
+	@itemWidth: 200px;
+	@iconHover: 20px;
+	.items-group {
+		margin-left: 30px;
+		.items-computer {
+			.itemstext {
+				color: #fff;
+				height: 100%;
+				display: block;
+				width: @itemWidth - @iconHover;
+				background: #909090;
+				float: left;
+				border-radius: 5px !important;
+			}
+			.hovericon {
+				height: 100%;
+				display: block;
+				width: @iconHover;
+				display: none;
+				background: url(../../images/btn_la.png) no-repeat center;
+				float: left;
+				margin-left: -1px;
+			}
+			width: @itemWidth;
+			height: @baseHeight;
+
+			text-align: center;
+			line-height: @baseHeight;
+			font-size: 14px;
+			margin-bottom: 10px;
+			cursor: pointer;
+		}
+
+		.items-computer:hover,
+		.ok {
+			.hovericon {
+				display: block;
+			}
+			.itemstext {
+				background: #7CC0FA;
+				border-radius: 5px 0 0 5px !important;
+			}
+		}
+	}
+}
+
+.box3 {
+
+	position: relative;
+
+	.box-center {
+		background: #FFF;
+		border: 1px solid #999;
+		text-align: center;
+		width: 250px;
+		height: 250px;
+		img {
+			//width: 0%;
+			margin: 40px auto;
+		}
+
+		p {
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+			color: #2A79A1;
+		}
+	}
+
+	.box3-first {
+		height: 407px;
+		background-image:url(../../images/img_mid_background.jpg);
+		background-repeat:no-repeat;
+		background-size:cover;
+
+		.box-main {
+			position: relative;
+			top: 50%;
+			width: 50%;
+			margin: 0 auto;
+		}
+	}
+	.box3-btns {
+		@toolTimes: 200;
+		a {
+			display: block;
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			text-decoration:none;
+			opacity: 1;
+
+			img {
+				margin: 150px auto 20px;
+			}
+
+			p {
+
+				font-size: 16px;
+				font-weight: bold;
+			}
+
+			&:hover {
+				transition: opacity @toolTimes;
+				-webkit-transition: opacity @toolTimes;
+				-moz-transition: opacity @toolTimes;
+				opacity: 0.8;
+
+			}
+		}
+	}
+}
+
+.footer {
+	@textColor: #D9D9D9;
+	@titleColor: #FFF;
+	margin-top: 60px;
+	background: #434343;
+
+	.pfooter {
+
+		background: url(../../images/footer_background.png) no-repeat;
+		padding: 50px 0;
+		li {
+			list-style: none;
+			margin-bottom: 5px;
+			a {
+				color: @textColor;
+				font-size: 14px;
+			}
+		}
+
+		.footer-title {
+			margin-bottom: 10px;
+			color: @titleColor;
+			font-size: 18px;
+			//font-weight: bold;
+		}
+	}
+}
+

@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.page {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: left;
+    width: 950px;
+	background-color: #fff;
+    border: 1px solid #d2d2d2;
+}
+.panel_main {
+	padding:20px;
+	line-height:40px;
+}
+.label_main_title {
+    color: #000;
+    font-size: 23px;
+    font-weight: 700;
+    height: 23px;
+    left: 30px;
+    top: 33px;
+    width: 100%;
+	padding:20px 0;

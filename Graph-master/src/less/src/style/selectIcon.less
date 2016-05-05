@@ -1,0 +1,85 @@
+
+@animateName: ratation;
+
+.defineRatation(@deg){
+	transform:rotate(@deg);
+	-moz-transform:rotate(@deg);
+	-webkit-transform:rotate(@deg);
+	-o-transform:rotate(@deg);
+	-ms-transform:rotate(@deg);
+}
+
+.dfAnimate(@animateName) {
+	@keyframes @animateName { from { .defineRatation(360deg);} to { .defineRatation(0deg);}}
+	@-webkit-keyframes @animateName { from { .defineRatation(180deg);} to { .defineRatation(0deg);}}
+	@-moz-keyframes @animateName { from { .defineRatation(360deg);} to { .defineRatation(0deg);}}
+	@-o-keyframes @animateName { from { .defineRatation(360deg);} to { .defineRatation(0deg);}}
+	@-ms-keyframes @animateName { from { .defineRatation(360deg);} to { .defineRatation(0deg);}}
+}
+
+
+
+.useAnimate(@animateName; @time){
+	animation: @animateName @time linear;
+	-webkit-animation: @animateName @time linear;
+	-moz-animation: @animateName @time linear;
+	-o-animation: @animateName @time linear;
+	-ms-animation: @animateName @time linear;
+}
+
+.dfAnimate(@animateName);
+
+.selectIcon {
+
+	@imgW : 80px;
+	@imgH : 80px;
+	@delBtnSize: 20px;
+
+	.selectIcon-list {
+
+		margin-top: 10px;
+
+		.selectIcon-box {
+
+			width: @imgW;
+			height: @imgH;
+
+			position: relative;
+			float: left;
+			cursor: pointer;
+
+			img {
+				width: 90%;
+				height: 90%;
+			}
+
+			.selectIcon-delete-btn {
+				position: absolute;
+				right: 0;
+				top: -(@delBtnSize/2);
+				z-index: 99;
+				cursor: pointer;
+				width: @delBtnSize;
+				height: @delBtnSize;
+				text-align: center;
+				line-height: @delBtnSize;
+				display: none;
+				font-size: 30px;
+				color: #CCC;
+				background: url(../images/close.png) no-repeat center center;
+				&:hover {
+					.useAnimate(@animateName; 0.3s);
+				}
+			}
+
+			&:hover {
+				.selectIcon-delete-btn {
+					display: block;
+				}
+			}
+
+		}
+	}
+
+
+}

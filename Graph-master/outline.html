@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!--[if lt IE 9]><script>window.location.href="browser-support.html";</script><![endif]-->
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<title>Outline</title>
+		<script type="text/javascript" src="js/include.js"></script>
+		<script type="text/javascript">
+			(function(self){
+				var graph,
+					outline;
+
+				self.graph = self.graph || {};
+				graph = self.graph;
+				graph.onload = function(){
+					var view,
+						list,
+						dict = null,
+						o;
+
+					$(document.body).width($(window).width());
+					$(document.body).height($(window).height());
+
+					view = decodeURIComponent(urlParams.view);
+					o = graph.viewPortfolio.getAll();
+
+					if(typeof o === "object"){
+						if(typeof o[view] === "object"){
+							list = o[view].viewList;
+							dict = o[view];
+							graph.openChild = {};
+							outline = new App(list, document.body, dict);
+							show3d();
+						}else{
+							graph.utils.alert("错误：视图【" + view + "】不存在！");
+						}
+					}else{
+						graph.utils.alert("系统错误：读取数据错误！");
+					}
+				};
+
+				self.show3d = function(){
+					var arr = [];
+					$.each(outline.graph, function(){
+						arr.push(this.graph.getJson());
+					});
+					graph.utils.createWebGl({
+						layers: arr,
+						relation: [
+							{source: "2", target: "4"},
+							{source: "3", target: "4"}
+						]
+					});
+				};
+
+			})(this);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

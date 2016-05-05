@@ -1,0 +1,28 @@
+
+<div class="tabbable tabbable-custom selectIcon">
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<a data-toggle="tab" href="#tab_88_1">图标列表</a>
+		</li>
+		<li>
+			<a data-toggle="tab" href="#tab_88_2">上传图标</a>
+		</li>
+	</ul>
+
+	<div class="tab-content">
+		<div id="tab_88_1" class="tab-pane active">
+			<div class="selectIcon-list clear">
+				{{#each list}}
+				<div class="selectIcon-box">
+					<img src="{{this}}" />
+					<span class="selectIcon-delete-btn"></span>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div id="tab_88_2" class="tab-pane">
+			<input type="file" id="uploadIconFile" />
+		</div>
+	</div>
+</div>

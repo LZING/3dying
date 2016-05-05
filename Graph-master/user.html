@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>用户页</title>
+	<!--[if lt IE 9]><script>window.location.href="browser-support.html";</script><![endif]-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<link rel="shortcut icon" href="../favicon.ico" />
+	<link rel="stylesheet" href="css/view/user.css" />
+	<script type="text/javascript" src="js/include.js"></script>
+	<script type="text/javascript" src="js/view/user.js"></script>
+</head>
+<body>
+<div class="mb20">
+	<div class="header"></div>
+</div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-9">
+			<div class="panel panel-info">
+				<div class="panel-heading clearfix">
+					<div class="btn-group pull-right">
+						<a href="javascript:;" id="subBtn" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="订阅"><i class="fa fa-plus"></i></a>
+						<a href="javascript:;" id="subRefresh" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="刷新"><i class="fa fa-refresh"></i></a>
+					</div>
+					<div class="panel-title">我的订阅</div>
+				</div>
+
+				<div class="panel-body clear" id="subViews">
+
+				</div>
+			</div>
+
+			<div class="panel panel-danger">
+				<div class="panel-heading clearfix">
+					<div class="btn-group pull-right">
+						<a href="javascript:;" id="myViewRefresh" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="刷新"><i class="fa fa-refresh"></i></a>
+					</div>
+					<div class="panel-title">我的视图</div>
+				</div>
+				<div class="panel-body clear" id="myViews">
+
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3 rightmain" data-spy="affix" data-offset-top="50">
+
+			<div>
+				<button class="btn btn-primary btn-block" id="rightTitle">点击视图查看信息</button>
+			</div>
+
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-warning">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+								预警
+							</a>
+						</h4>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse in">
+						<div class="panel-body bgwhite">
+
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+								告警
+							</a>
+						</h4>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body bgwhite">
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+								工单
+							</a>
+						</h4>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel-body bgwhite">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

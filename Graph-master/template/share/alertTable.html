@@ -1,0 +1,30 @@
+<div class="alert-dialog" id="{{id}}" style="left: {{x}}px; top:{{y}}px;">
+	<div class="alert-dialog-head">
+		<span class="alert-dialog-title">详细信息</span>
+	</div>
+	<div class="alert-dialog-body">
+		<table class="alert-table table">
+			{{#each list}}
+			{{#isEven @index}}
+			<tr class="even">
+				{{else}}
+			<tr>
+				{{/isEven}}
+				{{#ifCond @index "==" 0}}
+				{{#each this}}
+				<th>{{this}}</th>
+				{{/each}}
+				{{else}}
+				{{#each this}}
+				<td>{{{this}}}</td>
+				{{/each}}
+				{{/ifCond}}
+			</tr>
+			{{/each}}
+		</table>
+	</div>
+
+	<button class="alert-dialog-close btn btn-xs btn-danger">
+		<i class="fa fa-times"></i>
+	</button>
+</div>

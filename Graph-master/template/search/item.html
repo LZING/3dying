@@ -1,0 +1,20 @@
+<table class="table table-striped table-bordered table-hover table-full-width" id="{{id}}">
+	<thead>
+	<tr>
+		<th>唯一标识</th>
+		<th class="hidden-480">一级分类</th>
+		<th class="hidden-480">二级分类</th>
+		<th class="hidden-480">三类分类</th>
+	</tr>
+	</thead>
+	<tbody>
+	{{#each list}}
+	<tr ciid="{{_neo4jid_}}">
+		<td>{{_id_}}</td>
+		<td class="hidden-480">{{一级分类}}</td>
+		<td class="hidden-480">{{二级分类}}</td>
+		<td class="hidden-480">{{三级分类}}</td>
+	</tr>
+	{{/each}}
+	</tbody>
+</table>

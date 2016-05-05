@@ -1,0 +1,18 @@
+{{#if success}}
+<div class="panel panel-success">
+{{else}}
+<div class="panel panel-default">
+{{/if}}
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a class="accordion-toggle" data-toggle="collapse" data-parent="#{{parentId}}" href="#{{id}}">
+			{{title}}
+			</a>
+		</h4>
+	</div>
+	<div id="{{id}}" class="panel-collapse collapse {{collapse}}">
+		<div class="panel-body" style="overflow-y: auto;">
+		{{{body}}}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>打印啦手绘线条</title>
+    <meta name="Keywords" content="打印啦,3D模型下载,STL模型下载" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <script type="text/javascript">
+            var BASE_URL = '';
+            var BASE_SCRIPT = '/index.php';
+            var USER = {};
+                                USER.ID = 0;
+                        USER.loginUrl = "/site/login.html?returnUrl=http%3A%2F%2Fwww.dayin.la%2Fapps%2Fdraw.html";
+    </script>
+    
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.5.8/css/sm.min.css">
+    <link rel="stylesheet" href="/themes/mobile/css/app.css">
+    <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    
+</head>
+
+<body class="apps-draw">
+    <div class="page" id="draw-first">
+    <div class="apps-draw-top" id="draw-top">
+        <ul class="apps-draw-topleft clearfix">
+            <li class="apps-draw-help"><a href="/apps/index.html"><img src="/themes/mobile/images/app/draw-icon-help.png"/></a></li>
+            <li class="apps-draw-orange cancel"><img src="/themes/mobile/images/app/draw-icon-back.png"/></li>
+            <li class="apps-draw-green next"><img src="/themes/mobile/images/app/draw-icon-next.png"/></li>
+            <li class="apps-draw-red clearContext"><img src="/themes/mobile/images/app/draw-icon-trash.png"/></li>
+        </ul>
+        <div class="apps-draw-line"></div>
+        <ul class="apps-draw-topcenter">
+            <li class="apps-draw-green pencil active"><img src="/themes/mobile/images/app/draw-icon-pen.png"/></li>
+            <li class="apps-draw-tuya handwriting"><img src="/themes/mobile/images/app/draw-icon-tuya.png"/></li>
+            <li class="apps-draw-orange drawLine"><img src="/themes/mobile/images/app/draw-icon-line.png"/></li>
+            <li class="apps-draw-rect square"><img src="/themes/mobile/images/app/draw-icon-rect.png"/></li>
+            <li class="apps-draw-green circle"><img src="/themes/mobile/images/app/draw-icon-cirle.png"/></li>
+            <li class="apps-draw-orange rubber"><img src="/themes/mobile/images/app/draw-icon-clear.png"/></li>
+            <li class="apps-draw-green open-panel" data-panel='#panel-right'><img src="/themes/mobile/images/app/draw-icon-pic.png"/></li>
+        </ul>
+        <div class="apps-draw-line" style="left: 88%;"></div>
+        <div class="apps-draw-topright">
+            <div class="apps-draw-toprightin">
+                <a id="JsPreview" href="#draw-second" class="apps-draw-go"><img src="/themes/mobile/images/app/draw-icon-go.png"/></a>
+            </div>
+        </div>
+    </div>
+    <ul id="line_size" class="apps-draw-linesize">
+        <li><div class="small active"><a data-value="2"></a></div></li>
+        <li><div class="middle"><a data-value="3"></a></div></li>
+        <li><div class="large"><a data-value="4"></a></div></li>
+    </ul>
+    <div class="content">
+        <div class="canvas_container">
+            <canvas id="canvas">浏览器不支持哦，亲</canvas>
+            <canvas id="canvas_bak"></canvas>
+        </div>
+    </div>
+</div>
+<div class="page" id="draw-second">
+    <div class="apps-draw-top" id="draw-top">
+        <div class="apps-draw-return">
+            <a class="back apps-draw-red" href="#draw-first"><img src="/themes/mobile/images/app/draw-icon-return.png"/></a>
+        </div>
+        <div class="apps-draw-line" style="left: 11%"></div>
+        <div class="apps-draw-topheight"><input id="JsHeightRange" tpye="text" /></div>
+        <div class="apps-draw-line" style="left: 88%;"></div>
+        <div class="apps-draw-topright">
+            <div class="apps-draw-toprightin">
+                <a id="JsPrint" href="#" class="apps-draw-go"><img src="/themes/mobile/images/app/draw-icon-go.png"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="canvas_container" id="draw-container"></div>
+</div>
+<div class="panel-overlay"></div>
+<div class="panel panel-right panel-cover" id="panel-right">
+    <div class="content-block">
+        <div class="apps-file">
+            <a href="#" class="button button-big button-fill button-primary">拍照/本机图片</a>
+            <input id="fileUpload" type="file">
+        </div>
+        <!-- Click on link with "close-panel" class will close panel -->
+        <p>将图片拖入到画板中</p>
+        <div class="apps-draw-image" id="js-image-div">
+            <div class="row">
+            <div class="col-50"><img src="http://www.dayin.la/attachment/thumb/2016-01/09/draw_80_500x500.jpg"/></div>
+            <div class="col-50"><img src="http://www.dayin.la/attachment/thumb/2016-01/09/draw_79_500x500.jpg"/></div>
+            <div class="col-50"><img src="http://www.dayin.la/attachment/thumb/2016-01/09/draw_78_500x500.jpg"/></div>
+            <div class="col-50"><img src="http://www.dayin.la/attachment/thumb/2016-01/09/draw_77_500x500.jpg"/></div>
+            <div class="col-50"><img src="http://www.dayin.la/attachment/thumb/2016-01/09/draw_76_500x500.jpg"/></div>
+            <div class="col-50"><img src="http://www.dayin.la/attachment/thumb/2016-01/09/draw_75_500x500.jpg"/></div>
+    </div>
+<div class="row">
+    <div class="col-50"><a href="/apps/draw.html" class="button button-big button-fill button-danger js-page external">上一页</a></div>
+    <div class="col-50"><a href="/apps/draw.html?page=2" class="button button-big button-fill button-success js-page external">下一页</a></div>
+</div>
+        </div>
+        <p><a href="#" class="close-panel">关闭</a></p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $(document).on('click', '.js-page', function () {
+            $.ajax({
+                url: $(this).attr('href'),
+                type: 'POST',
+                cache: false,
+                success: function (html) {
+                    $('#js-image-div').html(html);
+                },
+                error: function (XHR) {
+                    alert(XHR.responseText);
+                }
+            });
+            return false;
+        });
+    });
+</script>    <div class="popup popup-index">
+        <form class="apps-index-form" action="/app/login.html" method="post">
+            <img src="/themes/mobile/images/app/index-form.png" alt=""/>
+            <h3>登录</h3>
+            <input type="text" name="username" class="input-xfat" placeholder="请输入账号">
+            <input type="password" name="password" style="border-top:none" placeholder="请输入密码">
+            <div class="row">
+                <div class="col-40">
+                    <button type="submit" class="button button-fill apps-index-submit" id='js-apps-login'>登录</button>
+                </div>
+                <div class="col-60">
+                    <a class="external apps-index-rigister" href="/site/registerMobile.html">没有账号点击这里注册</a>                </div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+    $(function () {
+        $(document).on('click', '#js-apps-login', function () {
+            $.ajax({
+                url: $(this).parents('form').attr('action'),
+                type: 'POST',
+                dataType:'json',
+                data: $(this).parents('form').serialize(),
+                cache: false,
+                success: function (json) {
+                    if(json.errorCode>0){
+                        alert(json.msg);
+                    }else{
+                        window.location.reload();
+                    }                    
+                },
+                error: function (XHR) {
+                    alert(XHR.responseText);
+                }
+            });
+            return false;
+        });
+    });
+</script>
+    <script type='text/javascript' src='/js/threejs/three.71.min.js'></script>
+    <script type='text/javascript' src='/js/threejs/iceman3d-core.js'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.5.8/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='/static/range.min.js'></script>
+    <script type='text/javascript' src='/themes/mobile/js/app.tools.js'></script>
+<script type="text/javascript" src="/js/threejs/OrbitControls.js"></script>
+<script type="text/javascript" src="/create/js/clipper.js"></script>
+<script type="text/javascript" src="/js/threejs/potrace.js?_t=2"></script>
+<script type="text/javascript" src="/plugins/draw-master/js/draw.js"></script>
+<script type="text/javascript" src="/themes/mobile/js/touch.min.js?_t111011"></script>
+<script type="text/javascript" src="/themes/mobile/js/AppDrawInit.js?_t111011"></script>
+</body>
+</html>

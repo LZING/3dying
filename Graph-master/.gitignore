@@ -1,0 +1,7 @@
+node_modules
+.project
+.git
+Applog
+.idea
+plugins/mxGraph
+dashboard

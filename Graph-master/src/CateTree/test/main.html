@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<!-- 引入QUnit -->
+		<link rel="stylesheet" href="http://localhost:8080/mmdb/javascripts/tree/libs/QUnit/qunit-1.12.0.css" />
+		<script type="text/javascript" src="http://localhost:8080/mmdb/javascripts/tree/libs/QUnit/qunit-1.12.0.js"></script>
+		<!-- 引入QUnit END -->
+		
+		<!-- 引入tree.js -->
+		<script type="text/javascript" src="http://localhost:8080/mmdb/javascripts/tree/build/tree.js"></script>
+		
+		<script type="text/javascript" id="testCode">
+		
+		var main = function(){
+			
+			// 创建一个测试
+			test("T()", function(){
+				var tree;
+				
+				tree = T();
+			    ok( tree , "code: tree = T(); || 没有传入参数，也能返回一个实例");
+				
+				tree = T({}); 
+			    ok( tree , "code: tree = T({}) || 传入object参数，即使没有任何成员，但仍然返回一个实例");
+			    
+				tree = T([]); 
+			    ok( tree , "code: tree = T([]) || 传入array数组，即使没有任何成员，但仍然返回一个实例");
+				
+			});
+			
+			
+		};
+
+		window.onload = main;
+		
+		</script>
+		
+	</head>
+	<body>
+		<h1 id="qunit-header">Tree单元测试</h1>
+		<h2 id="qunit-banner"></h2>	
+		<h2 id="qunit-userAgent"></h2>
+		<ol id="qunit-tests"></ol>
+	</body>
+</html>
+
+
+

@@ -1,0 +1,9 @@
+<tr name={{key}} class="title">
+	<td colspan="2" class="title">{{key}}</td>
+</tr>
+{{#each list}}
+<tr name={{../key}}>
+	<td>{{@key}}</td>
+	<td>{{this}}</td>
+</tr>
+{{/each}}

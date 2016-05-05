@@ -1,0 +1,63 @@
+
+@treeBgColor : #FFF;
+@treeTextColor : #333;
+@treeHoverColor : #CCC;
+@treeItemHoverBgColor: #e6e6e6;
+@lineStyle: 1px dotted #CCC;
+@selectedBgColor: #D9EDF7;
+
+/* tree */
+.tree {
+	overflow: hidden;
+
+	.tree-folder .tree-folder-content:before,
+	&:before {
+		// border-left: @lineStyle;
+	}
+
+	.selected {
+		.tree-item-name,
+		.tree-folder-name{
+		}
+
+		background: @selectedBgColor;
+	}
+
+	.tree-item {
+		color: @treeTextColor;
+
+		&:hover {
+			background: @treeItemHoverBgColor;
+		}
+
+		.tree-item-name > i {
+			color: @treeHoverColor;
+		}
+	}
+
+	.tree-folder {
+		color: @treeTextColor;
+
+		.tree-folder-header {
+			width: 100%;
+
+			> i {
+				color: @treeHoverColor;
+			}
+
+			&:hover > i {
+				color: @treeBgColor;
+			}
+		}
+	}
+
+	.tree-plus-minus .tree-folder-header {
+		.tree-folder-header .fa-folder:after,
+		.tree-folder-header .fa-folder-open:after {
+			background: none;
+			content: inherit !important;
+		}
+	}
+}
+
+/* END tree */

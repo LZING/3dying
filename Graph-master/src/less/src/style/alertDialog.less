@@ -1,0 +1,47 @@
+.alert-dialog {
+
+	@headHeight : 30px;
+	@baseColor: #3276B1;
+	@tableColor: #EFEFEF;
+	position: absolute;
+	background: #FFF;
+	border: 1px solid @baseColor;
+	min-width: 300px;
+
+	.alert-dialog-head {
+		background: @baseColor;
+		color: #FFF;
+		font-weight: bold;
+		height: @headHeight;
+		line-height: @headHeight;
+		text-indent: 10px;
+	}
+
+	.alert-dialog-body {
+		overflow: hidden;
+
+		.alert-table {
+
+			tr:first-child {
+				height: @headHeight;
+			}
+
+			th {
+				background: @tableColor;
+			}
+
+			td {
+				border-right: 1px solid @tableColor;
+				border-bottom: 1px solid @tableColor;
+				margin-top: -1px;
+				margin-left: -1px;
+			}
+		}
+	}
+
+	.alert-dialog-close {
+		position: absolute;
+		right: 5px;
+		top: 4px;
+	}
+}

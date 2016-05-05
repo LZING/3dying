@@ -1,0 +1,189 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Mar 12, 2015, 2:42:13 PM
+    Author     : 8290615@qq.com
+*/
+/*main*/
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;padding: 0;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a:hover {
+    color: #2a6496;
+    text-decoration: underline;
+}
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.fn-no-radius {border-radius: 0;}
+.left{float: left;}
+.right{float: right;}
+
+.clearfix:before,.clearfix:after,
+.navbar:before,.navbar:after {
+    display: table;
+    content: " ";
+}
+.clearfix:after,
+.navbar:after {
+    clear: both;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('//at.alicdn.com/t/font_1433160011_7835333.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1433160011_7835333.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_1433160011_7835333.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/font_1433160011_7835333.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_1433160011_7835333.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{font-family:"iconfont";font-size:16px;font-style:normal;}
+.container-fluid {width: 100%;margin: 0 auto;}
+.navbar {
+    height: 80px;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    padding: 0 15px 0 25px;
+}
+.navbar-brand {float: left;margin-top: 10px;display: block;width: 160px;height: 62px;}
+.navbar-nav {float: left;margin-left: 25px;}
+.navbar-nav.right {float: right;}
+.navbar-nav li {width: 95px;height: 80px;text-align: center;float: left;}
+.navbar-nav li.active {background-color: #ff1e0d;}
+.navbar-nav li a {display: block;width: 95px;height: 70px;padding-top: 10px;color: #b3b3b3;text-decoration: none;cursor: pointer;}
+.navbar-nav li i{color: #808080;display: block;font-size: 27px;}
+.navbar-nav li.active a {color: #fff;}
+.navbar-nav li.active i {color: #fff;}
+.navbar-nav-list {display: none;overflow: hidden;border-top: 2px solid #ff1e0d;}
+.navbar-nav-list li {width: 95px;height: 46px;line-height: 46px;text-align: center;background-color: #000;}
+.navbar-nav-list li a {color: #b3b3b3;height: 46px;line-height: 46px;padding: 0;}
+.navbar-nav-list li a:hover {color: #fff;}
+.title-bar {height: 40px;line-height: 40px;color: #fff;background-color: #333;position: fixed;top: 0;left: 0;width: 100%;z-index: 999}
+.title-bar h2 {margin: 0 0 0 20px;font-size: 16px}
+.title-bar .right a, .title-bar .right button {
+    color: #a5a5a5;
+    padding: 0 26px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0 30px;
+}
+.title-bar .right button.active{background-color: #fff;}
+.title-bar .right button[disabled]{color: #ddd;}
+.title-bar .right a:hover,
+.title-bar .right button:hover {color: #fff;background-color: #424242;}
+.title-bar .right a:active {color: #d1d1d1;}
+.model-main {width:100%;position: relative;}
+.loading-shadow {position: absolute;top: 0;left:0;background: rgba(0,0,0,.6);width: 100%;height: 100%;z-index: 1000;}
+.actionbar {position: absolute;top: 20px;left: 20px;}
+.actionbar-top a {background-color: #000;display: block;color: #fff;text-decoration: none;text-align: center;cursor: pointer;}
+.actionbar-home a {width: 48px;height: 48px;line-height: 48px;}
+.actionbar-home a:hover {background-color: #191919;}
+.actionbar-home i {font-size: 26px;color:#fff}
+.actionbar-zoom {margin-left: 4px;float: left;}
+.actionbar-zoom a {width: 22px;height: 22px;line-height: 22px;}
+.actionbar-zoom a:hover {background-color: #191919;}
+.actionbar-zoom i {font-size: 16px;}
+.actionbar-block {margin-top: 30px;position: relative;width: 180px;}
+.actionbar-icon a {position: relative;background-color: #000;display: block;color: #fff;text-decoration: none;text-align: center;cursor: pointer;width: 48px;height: 48px;line-height: 48px;margin-bottom: 30px;}
+.actionbar-icon a:hover {background-color: #191919;}
+.actionbar-icon a.active:active {background-color: #b51509;}
+.actionbar-icon a.active {background-color: #ff1e0d;}
+.actionbar-icon i {font-size: 26px;color:#fff}
+.actionbar-icon a.active em {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 8px solid #ff1e0d;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    top: 16px;
+    right: -8px;
+}
+.actionbar-icon a.active:active em {border-left: 8px solid #b51509;}
+.actionbar-pannel {background: rgba(0,0,0,.8);padding: 15px;width: 180px;height: 200px;z-index: 1001;}
+.actionbar-pannel h3 {color: #fff;margin-bottom: 12px;}
+.actionbar-pannel label {color: #fff;}
+.actionbar-pannel-div {height: 30px;line-height: 30px;margin-bottom: 10px;color: #fff;}
+.actionbar-pannel-icon {background:url('../images/app/seticon.png?r=0817') no-repeat;height: 30px;line-height: 30px;margin-bottom: 15px;padding-left: 40px;}
+.actionbar-pannel-icon.icon01 {background-position: 0 0;}
+.actionbar-pannel-icon.icon02 {background-position: 0 -35px;}
+.actionbar-pannel-icon.icon03 {background-position: 0 -70px;}
+.actionbar-pannel-icon.icon04 {background-position: 0 -103px;}
+.actionbar-pannel-icon.icon05 {background-position: 0 -135px;}
+.actionbar-pannel-icon.icon06 {background-position: 0 -168px;}
+.actionbar-pannel-icon.icon07 {background-position: 0 -209px;}
+.actionbar-pannel-icon.icon08 {background-position: 0 -250px;}
+.actionbar-pannel-icon.icon09 {background-position: 0 -291px;}
+.actionbar-pannel-icon span {color: #fff;padding-right: 10px;font-size: 16px;font-weight: bold;}
+.actionbar-pannel-icon.icon04 span {color: #c80000;}
+.actionbar-pannel-icon.icon05 span {color: #027c02;}
+.actionbar-pannel-icon.icon06 span {color: #005fff;}
+.actionbar-pannel-icon.icon07 span {color: #c80000;}
+.actionbar-pannel-icon.icon08 span {color: #027c02;}
+.actionbar-pannel-icon.icon09 span {color: #005fff;}
+.actionbar-pannel-icon .form-control, .actionbar-pannel-div .form-control {width: 100px;}
+@-webkit-keyframes twinkling{
+    0%{
+        opacity:0.2;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.warning-text {
+    font-weight: 700;color: red;padding-right: 20px;display: none;
+    -webkit-animation: twinkling 1s infinite ease-in-out;
+}
+.operate-pannel-left {
+    width: 280px;float: left;text-align: center;
+}
+.operate-pannel-right {
+    width: 190px;float: right;border-left: 1px solid #eee;text-align: center;
+}
+.operate-pannel-middle {margin:40px 0;}
+.print-form-pannel label {text-align: right;width: 125px;}
+.print-form-pannel input[type='text'] {display: inline-block;width: 150px;}
+.print-form-pannel .form-group {margin-bottom: 10px;}
+
+.print-dropdown-box {position: relative;}
+.print-dropdown-box ul {display:none;width: 320px;z-index: 200;border: 1px solid #cccccc;border-top: none;position: absolute;margin: 0;top: 0;left: 0;background: #fff;}
+.print-dropdown-box ul li {position: relative;cursor: pointer;padding: 6px 12px;line-height: 25px;}
+.print-dropdown-box ul li:hover {background-color: #5897fb;color: #fff;}
+.print-dropdown-box ul li:hover a {color: #fff;}
+.print-dropdown-box li a {display: block;width: 250px;color: #333;font-size: 1.5rem;}
+.print-dropdown-box li a:hover {text-decoration: none;}
+.print-dropdown-box li span {position: absolute;right: 10px;top: 6px;}
+.print-dropdown-box li span i:hover {color: red;}
+
+.footer {background-color: #333;height: 45px;line-height: 45px;position: fixed;bottom:0;left: 0;right: 0;}
+.footer-name {color: #fff;float: left;text-align: center;background-color: #000;width: 304px}
+.libary-side {width: 304px;height: 100%;background-color: #595959;position: fixed;left: 0;top: 40px;bottom:0;}
+.libary-main {margin-left: 304px;height: 100%;background-color: #fff;}
+.libary-main-list {padding: 20px;}
+.library-side-list .library-side-item {height: 40px;}
+.library-side-list .library-side-item a {display: block;height: 40px;line-height: 40px;color: #fff;padding: 0 20px;text-decoration: none;cursor: pointer;}
+.library-side-list .library-side-item.active a {background: #fff;color: #ff1e0d;font-weight: bold;}
+.library-side-expand-item a {cursor: pointer;display: block;height: 40px;line-height: 40px;color: #fff;padding: 0 20px;text-decoration: none;background: url(../images/app/iconfont-xiangyou.png) no-repeat 20px center;text-indent: 20px;}
+.library-side-expand-item a.active {background-image: url(../images/app/iconfont-xiangxia.png);}
+.library-side-expand-item ul a {padding: 0;background: none;text-indent: 0;height: 36px;line-height: 36px;padding-left: 55px;}
+.library-side-expand-item ul a.active {background: #fff;color: #ff0909;}
+.nav-avatar {width: 64px;height: 64px;margin: 8px 0 0 0;border-radius: 64px;}
+.printing-progress {border: 1px solid #888;padding: 3px;margin: 4px 0;background: #fff;}
+.printing-progress span {display: block;background-color: #ff0909;height: 4px;}

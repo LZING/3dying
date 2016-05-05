@@ -1,0 +1,14 @@
+<div class="node {{layout}}">
+	<div class="pri">
+		<i class="fold"></i>
+		<span class="name mb10">{{name}}</span>
+	</div>
+	
+	<div class="childrenNode">
+	{{#if childrenNode}}
+		{{#each childrenNode}}
+			<div class="ico" ico="{{ico}}" name="{{name}}"></div>
+		{{/each}}
+	{{/if}}
+	</div>
+</div>

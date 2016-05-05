@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>业务流运营可视</title>
+		<!--[if lt IE 9]><script>window.location.href="browser-support.html";</script><![endif]-->
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<script type="text/javascript" src="js/include.js"></script>
+		<script type="text/javascript" src="js/view/tree.js"></script>
+	</head>
+	<body>
+		<div class="succ-header">
+			<div class="header"></div>
+		</div>
+
+		<div class="main-box clear">
+			<div class="left-bar">
+				<div class="left-bar-icon">
+					<div class="left-bar-icon-item active">
+						<img src="images/new/left_ico_ggywl.png" />
+						<p>业务流运营</p>
+						<div class="hover-icon"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="right-main clear">
+
+				<div class="graphs-toolbar clear">
+					<div class="graphs-toolbar-right fs0">
+						<div class="theme-btn-area">
+							<i class="theme-btn theme-btn-white"></i>
+							<i class="theme-btn theme-btn-black"></i>
+						</div>
+					</div>
+					<div class="graphs-toolbar-left">
+						<div id="toolbar">
+						</div>
+					</div>
+				</div>
+
+				<div class="graph-area">
+					<div class="left-bar-area" id="siderbar">
+						<div id="collapse-sidebar" class="collapse-btn-area">
+							<div class="collapse-btn"></div>
+						</div>
+
+						<div class="left-bar-area-body">
+							<div id="sidebar-public" class="left-bar-area-item active">
+
+								<div class="tabbable-custom nav-justified">
+									<ul class="nav nav-tabs nav-justified">
+										<li class="active">
+											<a href="#tab_2_1_1" data-toggle="tab">
+												公有视图</a>
+										</li>
+										<li>
+											<a href="#tab_2_1_2" data-toggle="tab">
+												私有视图</a>
+										</li>
+									</ul>
+									<div class="tab-content">
+										<div class="tab-pane active" id="tab_2_1_1">
+											<div class="text-right">
+												<div class="btn-group">
+													<button type="button" class="btn btn-xs btn-primary" id="viewTreeRefreshPub"><i class="fa fa-refresh"></i></button>
+												</div>
+											</div>
+
+											<div id="treeViewPub"></div>
+										</div>
+
+										<div class="tab-pane" id="tab_2_1_2">
+											<div class="text-right">
+												<div class="btn-group">
+													<button type="button" class="btn btn-xs btn-primary" id="viewTreeRefreshPri"><i class="fa fa-refresh"></i></button>
+												</div>
+											</div>
+											<div id="treeViewPri"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="graphs" class="graphs">
+						<div id="graphContainer" class="graphs-item active"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

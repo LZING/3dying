@@ -1,0 +1,25 @@
+<div class="panel panel-info">
+	<div class="panel-heading clearfix">
+		<div class="btn-group pull-right">
+			{{#if isAdmin}}
+			<a href="javascript:;" id="viewAddRootCatePub" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="创建目录"><i class="fa fa-plus"></i></a>
+			{{/if}}
+			<a href="javascript:;" id="viewTreeRefreshPub" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="刷新"><i class="fa fa-refresh"></i></a>
+		</div>
+		<div class="panel-title">公有视图</div>
+	</div>
+	<div class="panel-body treeMain" id="treeViewPub">
+	</div>
+</div>
+
+<div class="panel panel-danger">
+	<div class="panel-heading clearfix">
+		<div class="btn-group pull-right">
+			<a href="javascript:;" id="viewAddRootCatePri" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="创建目录"><i class="fa fa-plus"></i></a>
+			<a href="javascript:;" id="viewTreeRefreshPri" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="刷新"><i class="fa fa-refresh"></i></a>
+		</div>
+		<div class="panel-title">私有视图</div>
+	</div>
+	<div class="panel-body treeMain" id="treeViewPri">
+	</div>
+</div>

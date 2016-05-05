@@ -1,0 +1,12 @@
+{{#each list}}
+<li data-viewname="{{viewname}}" data-viewid="{{viewid}}">
+	<div class="task-title">{{@index}} {{viewname}}</div>
+	<div class="task-config">
+		<div class="btn-group">
+			<button class="btn btn-xs btn-danger remove">
+				<i class="fa fa-trash"></i>
+			</button>
+		</div>
+	</div>
+</li>
+{{/each}}

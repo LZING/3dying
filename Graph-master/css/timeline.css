@@ -1,0 +1,129 @@
+.timeline {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  left: 0;
+  background: #333;
+}
+.timeline-collspace {
+  width: 100%;
+  height: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+.timeline-graph-line-box {
+  padding: 10px;
+  height: 60px;
+  width: 100%;
+}
+.timeline-graph-line {
+  height: 100%;
+  position: relative;
+}
+.timeline-graph-line-rule {
+  height: 1px;
+  width: 100%;
+  background: #FFF;
+  position: absolute;
+  left: 0px;
+  top: 7px;
+  z-index: 0;
+}
+.timeline-graph-line-points {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+}
+.timeline-graph-labels {
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+.timeline-graph-line-graduations {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.timeline-graph-line-graduations-item {
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+}
+.timeline-graph-line-graduations-item-v {
+  width: 1px;
+  height: 15px;
+  margin: 0 auto;
+  text-align: center;
+  background: #FFF;
+}
+.timeline-graph-line-graduations-item-span {
+  position: absolute;
+  z-index: 9999;
+  color: #FFF;
+  display: block;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+}
+.timeline-graph-line-graduations-label {
+  position: absolute;
+  bottom: 0;
+  z-index: 9999;
+  height: 100%;
+  text-align: center;
+  color: #FFF;
+  font-size: 10px;
+}
+.timeline-graph-line-point {
+  position: absolute;
+  top: 0;
+  height: 15px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px !important;
+}
+.timeline-graph-line-point:hover,
+.timeline-graph-line-points .ok {
+  border: 1px solid #FFF;
+}
+.timeline-graph-line-point-clr {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px !important;
+  background: #FFF;
+  display: block;
+  border: 1px solid #FFF;
+  margin: auto;
+  cursor: pointer;
+}
+.timeline-graph-line-point-span {
+  display: block;
+  color: #FFF;
+}
+.timeline-collspace-top {
+  background: #3a3c3e url(../images/spare_top.png) no-repeat center center;
+}
+.timeline-collspace-bottom {
+  background: #3a3c3e url(../images/spare_bottom.png) no-repeat center center;
+}
+.timeline-graph-time-label {
+  position: absolute;
+  top: -70px;
+  left: 10px;
+  background: #000;
+  opacity: 0.5;
+  color: #FFF;
+  padding: 10px;
+  font-size: 30px;
+  width: 100px;
+  display: none;
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+<table>
+	<tr>
+		<th width="15"></th>
+		<th><input type="checkbox" style="display:none;" name="all"  class="treeText"/></th>
+		
+		<th>名称</th>
+
+	</tr>
+	{{#each list}}
+	<tr displayTarget="{{this}}">
+		<td>{{add @index}}</td>
+		<td><input type="checkbox" class="treeText"/></td>
+		
+		<td>{{this}}</td>
+	</tr>
+	{{/each}}
+</table>

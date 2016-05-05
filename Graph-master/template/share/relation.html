@@ -1,0 +1,24 @@
+<div class="relation-dialog">
+	<div class="relation-dialog-head form-group">
+		<select class="form-control" name="relation-type">
+			{{#each list}}
+			<option>{{id}}</option>
+			{{/each}}
+		</select>
+	</div>
+
+	<div class="relation-dialog-body">
+		{{#each list}}
+		<div class="relation-dialog-item form-horizontal hide" name="{{id}}">
+			<div class="form-body">
+				{{#each attributes}}
+				<div class="relation-dialog-row form-group">
+					<label class="col-md-3 control-label">{{name}}</label>
+					<div class="col-md-9"><input class="form-control" type="text" name="{{name}}" value="{{defaultVal}}" /></div>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</div>

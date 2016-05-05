@@ -1,0 +1,23 @@
+<div class="udbk_dialog" id="{{id}}" style="right: 10px; top:10px;">
+    <div class="udbk_head">
+        <div style="float: left;width: 90px;height: 30px;"></div>
+        <div style="float: left;width: 60px;height: 30px;">
+            <a id="udbk_cpu" class="udbk_func udbk_func_active" href="javascript:void(0)" style="border-radius: 2px 0px 0px 2px;">CPU</a>
+        </div>
+        <div style="float: left;width: 60px;height: 30px;">
+            <a id="udbk_memory" class="udbk_func" href="javascript:void(0)" style="border-radius: 0px 2px 2px 0px;">内存</a>
+        </div>
+        <div style="float: right;padding-right: 5px;margin-top: 5px;height: 20px;width: 20;">
+            <!--<a class="udbk_closed" href="javascript:void(0)"></a>-->
+            <img class="udbk_closed" src="images/udbk_close.png">
+        </div>
+    </div>
+    <div id="cpucontainer" style="height: 400px;">
+        <div id="cpuontime" style="height: 200px;"></div>
+        <div id="cpuhistory" style="height: 200px;"></div>
+    </div>
+    <div id="mcontainer" style="height: 400px;display: none;">
+        <div id="montime" style="height: 200px;"></div>
+        <div id="mhistory" style="height: 200px;"></div>
+    </div>
+</div>

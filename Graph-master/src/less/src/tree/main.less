@@ -1,0 +1,44 @@
+
+
+.header { display: none; }
+.left { display: none; }
+.graph-container {
+
+	overflow: hidden;
+	> div {
+		width: 100%; height:100%; display: none;
+	}
+}
+.graph-canvas { width: 100%; height: 100%; }
+.panel-body { background: #FFF; }
+
+.btns {
+
+	.top-btn {
+		position: absolute;
+		z-index: 9999;
+		top: 8px;
+	}
+
+	.theme-btn {
+		display:block;
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: 10px;
+		z-index: 9999999;
+		cursor: pointer;
+	}
+
+	.theme-btn-white {
+		background: #FFF;
+		border: 1px solid #000;
+		left: 30px;
+	}
+
+	.theme-btn-black {
+		border: 1px solid darkgreen;
+		background: #000000;
+		left: 10px;
+	}
+}

@@ -1,0 +1,16 @@
+<div class="attr-edit">
+	<p class="attr-tip">带 “*” 号必填</p>
+	{{#each list}}
+	<div class="attr-row">
+		<span>
+			<div class="attr-label">{{#if required}}<i>*</i>{{/if}}
+			{{name}}
+            </div>
+		</span>
+		<input class="treeText treeTextmg" name="{{name}}" required="{{#if required}}1{{else}}0{{/if}}" value="{{defaultVal}}" />
+	</div>
+	{{else}}
+	<h3 class="text-center">此对象暂时没有配置信息</h3>
+	{{/each}}
+</div>
+

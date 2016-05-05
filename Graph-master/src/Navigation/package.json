@@ -1,0 +1,23 @@
+{
+	"name": "Navigation",
+	"version": "0.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"grunt": "*",
+		"grunt-contrib-copy": "*",
+		"grunt-contrib-jshint": "*",
+		"grunt-contrib-cssmin": "*",
+		"grunt-contrib-less": "*",
+		"grunt-contrib-uglify": "*",
+		"grunt-contrib-jasmine": "*",
+		"grunt-contrib-watch": "*",
+		"grunt-yui-compressor": "*",
+		"grunt-contrib-concat": "*"
+	},
+	"author": "",
+	"license": "ISC"
+}

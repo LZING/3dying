@@ -1,0 +1,25 @@
+<div class="udbk_dialog_script" id="{{id}}" style="right: 10px; top:10px;">
+    <div class="udbk_head">
+        <div style="float: left;width: 270px;height: 30px;padding-top: 5px;padding-left: 10px;">切换步骤</div>
+        <div style="float: right;padding-right: 5px;margin-top: 5px;height: 20px;width: 20;">
+            <img class="udbk_closed" src="images/udbk_close.png">
+        </div>
+    </div>
+    <div style="margin-left: 10px;margin-top: 5px;margin-right: 10px;">
+        <div style="height: 25px;">所属IP：{{ciip}}</div>
+        {{#each sclist}}
+        <div style="height: 30px;border-bottom: 1px dotted white;padding-top: 8px;">第{{operStep}}步</div>
+        {{#each scripts}}
+        <div style="min-height: 30px;padding-top: 5px;padding-bottom: 5px;">
+            <div class="{{scriptstatus status}}" style="width: 250px;float: left">{{nickName}}&nbsp;&nbsp;&nbsp;</div>
+            <div class="{{scriptstatus status}}" style="width: 20px;float: left">{{scripticon status}}</div>
+            {{scriptISend status startTime endTime execTime}}
+        </div>
+        {{/each}}
+        {{/each}}
+    </div>
+    <div style="border-top: 1px solid #666666;margin-top: 10px;padding-top: 5px;">
+        <div id="scriptdashboard" style="height: 300px;width: 300px;margin: 0 auto;"></div>
+    </div>
+
+</div>

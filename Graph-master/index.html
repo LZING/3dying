@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html ng-app lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html ng-app lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html ng-app lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+	<head>
+		<meta charset="UTF-8" />
+		<title>可视化控制台</title>
+		<!--[if lt IE 9]><script>window.location.href="browser-support.html";</script><![endif]-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+		<meta content="mmdb Graph project" name="description" />
+		<meta content="mail@lizhong.me" name="author" />
+		<meta name="MobileOptimized" content="320" />
+		<link rel="shortcut icon" href="../favicon.ico" />
+
+		<script type="text/javascript" src="js/include.js"></script>
+		<script type="text/javascript" src="js/view/index.js"></script>
+	</head>
+	<body>
+		<!-- BEGIN HEADER -->
+		<div class="succ-header">
+			<div class="header"></div>
+		</div>
+		<!-- END HEADER -->
+		<div class="clearfix"></div>
+
+		<div class="main-box clear">
+			<div class="left-bar">
+				<div class="left-bar-icon">
+					<div data-sidebar="#sidebar-onlineEdit" data-graph="#graph-onlineEdit" data-module="onlineEdit" data-toolbar="#toolbar-onlineEdit" class="left-bar-icon-item active">
+						<img src="images/new/left_ico_zxbj.png" />
+						<p>在线编辑</p>
+						<div class="hover-icon"></div>
+					</div>
+					<div data-sidebar="#sidebar-viewManage" data-graph="#graph-viewManage" data-module="viewManagement" data-toolbar="#toolbar-viewManage" class="left-bar-icon-item">
+						<img src="images/new/left_ico_stgl.png" />
+						<p>视图管理</p>
+						<div class="hover-icon"></div>
+					</div>
+					<div data-sidebar="#sidebar-viewPortfolio" data-graph="#graph-viewPortfolio" data-module="viewPortfolio" data-toolbar="#toolbar-viewPortfolio"  class="left-bar-icon-item">
+						<img src="images/new/left_ico_zhst.png" />
+						<p>组合视图</p>
+						<div class="hover-icon"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="right-main clear">
+
+				<div class="graphs-toolbar">
+					<div id="toolbar-onlineEdit"></div>
+					<div id="toolbar-viewManage"></div>
+					<div id="toolbar-viewPortfolio" class="clear">
+						<button class="btn btn-xs btn-success pull-right mt5 mr10" id="viewportfolio-3d">
+							<i class="fa fa-cubes"></i>
+							3D模式
+						</button>
+					</div>
+				</div>
+
+				<div class="graph-area">
+					<div class="left-bar-area" id="siderbar">
+						<div id="collapse-sidebar" class="collapse-btn-area">
+							<div class="collapse-btn"></div>
+						</div>
+
+						<div class="left-bar-area-body">
+
+							<div id="sidebar-onlineEdit" class="left-bar-area-item active">
+								<div class="tabbable-custom nav-justified">
+									<ul class="nav nav-tabs nav-justified">
+										<li class="active">
+											<a href="#tab_1_1_1" data-toggle="tab">
+												在线编辑</a>
+										</li>
+										<li>
+											<a href="#tab_1_1_2" data-toggle="tab">
+												配置信息</a>
+										</li>
+										<li>
+											<a href="#tab_1_1_3" data-toggle="tab">
+												仪表盘</a>
+										</li>
+									</ul>
+									<div class="tab-content">
+										<div class="tab-pane active" id="tab_1_1_1">
+											<div id="icon-category"></div>
+											<div id="icon-custom" class="customIconArea clear"></div>
+											<div id="icon-baseShape" class="geItem-box clear"></div>
+										</div>
+										<div class="tab-pane" id="tab_1_1_2">
+											<div id="icon-ciinfo" class="form">
+												<div class="form">
+
+													<div class="form-body">
+														<div class="form-group">
+															<select name="a" class="form-control"></select>
+														</div>
+														<div class="form-group">
+															<select name="b" class="form-control"></select>
+														</div>
+
+														<div class="form-group">
+															<div class="input-group">
+																<input type="text" name="c" class="form-control">
+																	<span class="input-group-btn">
+																		<button class="btn blue">搜索</button>
+																	</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="configinfo-table"></div>
+												<div class="configinfo-page clear btn-group"></div>
+											</div>
+										</div>
+										<div class="tab-pane clear" id="tab_1_1_3">
+											<div class="clear" id="tab_6_4">
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div id="sidebar-viewManage" class="left-bar-area-item">
+
+								<div class="tabbable-custom nav-justified">
+									<ul class="nav nav-tabs nav-justified">
+										<li class="active">
+											<a href="#tab_2_1_1" data-toggle="tab">
+												公有视图</a>
+										</li>
+										<li>
+											<a href="#tab_2_1_2" data-toggle="tab">
+												私有视图</a>
+										</li>
+									</ul>
+									<div class="tab-content">
+										<div class="tab-pane active" id="tab_2_1_1">
+											<div class="text-right">
+												<div class="btn-group">
+													<button type="button" class="btn btn-xs btn-primary" id="viewTreeRefreshPub"><i class="fa fa-refresh"></i></button>
+													<button type="button" class="btn btn-xs btn-success" id="viewAddRootCatePub"><i class="fa fa-plus"></i></button>
+												</div>
+											</div>
+
+											<div id="treeViewPub"></div>
+										</div>
+
+										<div class="tab-pane" id="tab_2_1_2">
+											<div class="text-right">
+												<div class="btn-group">
+													<button type="button" class="btn btn-xs btn-primary" id="viewTreeRefreshPri"><i class="fa fa-refresh"></i></button>
+													<button type="button" class="btn btn-xs btn-success" id="viewAddRootCatePri"><i class="fa fa-plus"></i></button>
+												</div>
+											</div>
+											<div id="treeViewPri"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div id="sidebar-viewPortfolio" class="left-bar-area-item">
+							</div>
+						</div>
+					</div>
+
+					<div id="graphs" class="graphs">
+						<div id="graph-onlineEdit" class="graphs-item active"></div>
+						<div id="graph-viewManage" class="graphs-item"></div>
+						<div id="graph-viewPortfolio" class="graphs-item"></div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

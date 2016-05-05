@@ -1,0 +1,16 @@
+<table width="100%">
+	<tr>
+		<th width="15"></th>
+		<th width="20"><input type="checkbox" name="all" class="treeText"/></th>
+		<th width="60">分类</th>
+		<th>标识</th>
+	</tr>
+	{{#each list}}
+	<tr ciID="{{_neo4jid_}}" ciName="{{_id_}}">
+		<td>{{add @index}}</td>
+		<td><input type="checkbox" class="treeText"/></td>
+		<td>{{_category_}}</td>
+		<td>{{_id_}}</td>
+	</tr>
+	{{/each}}
+</table>

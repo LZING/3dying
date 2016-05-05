@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>IT运营分析可视平台</title>
+	<!--[if lt IE 9]><script>window.location.href="browser-support.html";</script><![endif]-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<link rel="stylesheet" href="css/view/portal.css" />
+	<script src="js/include.js"></script>
+	<script src="js/view/portal.js"></script>
+</head>
+<body>
+
+<a class="btn btn-info btn-lg back-top" href="#top">
+	<i class="fa fa-arrow-circle-up" style="font-size: 1.5em;"></i>
+</a>
+
+<div class="header navbar navbar-inverse" name="top">
+	<div class="container">
+		<div class="row">
+			<div class="header-inner">
+				<ul class="nav pull-right">
+					<li><a href="help/userHelp.html" target="_blank"><i class="fa fa-info"></i><span> 入门教程</span></a></li>
+					<li><a href="user.html" target="_blank"><i class="fa fa-user"></i><span> 我的工作台</span></a></li>
+					<li class="dropdown user"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<img alt=""
+							 src="../resource/img/avatar1_small.jpg">
+						<span class="username" id="loginUserName"></span><i class="icon-angle-down"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="../login/hw_logout.jsp"><i class="fa fa-sign-out"></i> 注销</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="toolbaraa">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="images/index_logo.png" class="img-responsive" />
+			</div>
+			<div class="col-md-3 clearfix">
+				<div class="link-box">
+					<a href="help/userHelp.html" target="_blank">入门教程</a> |
+					<a href="user.html">我的工作台</a> |
+					<a href="../feedback.html" target="_blank">意见反馈</a>
+				</div>
+			</div>
+			<div class="col-md-3 clearfix">
+				<div class="form-group form-inline pull-right" style="margin-top: 10px;">
+					<div class="input-group input-medium">
+						<input type="text" placeholder="搜索" id="searchInput" class="form-control" >
+						<span class="input-group-btn">
+							<button type="button" class="btn blue" id="searchBtn"><i class="fa fa-search"></i></button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- MENU -->
+<div class="container menus">
+	<div class="row">
+		<div class="item-menu col-md-3"><a href="#" data-ad="#mad1">eSee在线</a></div>
+		<div class="item-menu col-md-3"><a href="#" data-ad="#mad2">业务运营可视化</a></div>
+		<div class="item-menu col-md-3"><a href="#" data-ad="#mad3">产品运营可视化</a></div>
+		<div class="item-menu col-md-3"><a href="#" data-ad="#mad4">监控和告警可视化</a></div>
+	</div>
+</div>
+<!-- MENU END -->
+
+<!-- FOCUS -->
+<div class="container focus">
+	<div class="row hidead" id="mad2">
+		<div class="col-md-2 aditem">
+			<a href="tree.html">
+				<img src="images/mun_ico01.png" class="img-responsive" />
+				<p class="text-center">业务流运行可视</p>
+			</a>
+		</div>
+		<div class="col-md-2 aditem">
+			<a href="index.html">
+				<img src="images/mun_ico02.png" class="img-responsive" />
+				<p class="text-center">在线创建业务流</p>
+			</a>
+		</div>
+		<div class="col-md-2 aditem">
+			<a href="ci.html">
+				<img src="images/mun_ico03.png" class="img-responsive" />
+				<p class="text-center">应用基础实施可视化</p>
+			</a>
+
+		</div>
+		<div class="col-md-2 aditem">
+			<a href="#">
+				<img src="images/mun_ico04.png" class="img-responsive" />
+				<p class="text-center">系统诊断自动化</p>
+			</a>
+		</div>
+		<div class="col-md-2 aditem">
+			<a href="#">
+				<img src="images/mun_ico05.png" class="img-responsive" />
+				<p class="text-center">性能和容量可视化</p>
+			</a>
+		</div>
+
+	</div>
+
+	<div class="row hidead" id="mad1">
+		<div class="col-md-2 aditem">
+			<a href="help/userHelp.html" target="_blank">
+				<img src="images/menu/rumen.png" class="img-responsive" />
+				<p class="text-center">入门教程</p>
+			</a>
+		</div>
+		<div class="col-md-2 aditem">
+			<a href="user.html" target="_blank">
+				<img src="images/mun_ico07.png" class="img-responsive" />
+				<p class="text-center">我的运营工作台</p>
+			</a>
+		</div>
+		<div class="col-md-2 aditem">
+			<a href="../feedback.html" target="_blank">
+				<img src="images/menu/yijian.png" class="img-responsive" />
+				<p class="text-center">意见反馈</p>
+			</a>
+		</div>
+	</div>
+
+	<div class="row hidead" id="mad3">
+		<div class="col-md-2 aditem">
+			<a href="#" target="_blank">
+				<img src="images/menu/lingdao.png" class="img-responsive" />
+				<p class="text-center">领导运营驾驶舱</p>
+			</a>
+		</div>
+
+		<div class="col-md-2 aditem">
+			<a href="#">
+				<img src="images/menu/yuedu.png" class="img-responsive" />
+				<p class="text-center">产品月度运营报告</p>
+			</a>
+		</div>
+
+		<div class="col-md-2 aditem">
+			<a href="#">
+				<img src="images/menu/kanban.png" class="img-responsive" />
+				<p class="text-center">产品运营看板</p>
+			</a>
+		</div>
+		<div class="col-md-2 aditem">
+			<a href="#">
+				<img src="images/menu/zhiliangfenxi.png" class="img-responsive" />
+				<p class="text-center">产品质量分析</p>
+			</a>
+		</div>
+		<div class="col-md-2 aditem">
+			<a href="#">
+				<img src="images/menu/lanpishu.png" class="img-responsive" />
+				<p class="text-center">产品运营蓝皮书</p>
+			</a>
+		</div>
+
+	</div>
+
+	<div class="row hidead" id="mad4">
+		<div class="col-md-2 aditem">
+			<a href="http://w3.huawei.com/eipvms">
+				<img src="images/menu/eip.png" class="img-responsive" />
+				<p class="text-center">EIP集成管道可视</p>
+			</a>
+		</div>
+		<div class="col-md-2 aditem">
+			<a href="http://w3.huawei.com/bireport/vfs/public/portals/EDW/portal.sa?xml=edw_monitoring.portal">
+				<img src="images/menu/edw.png" class="img-responsive" />
+				<p class="text-center">EDW平台监控可视</p>
+			</a>
+		</div>
+	</div>
+
+	<div class="row">
+		<div id="carousel-example-generic" class="carousel slide mb30" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="images/img_ad_01.jpg" alt="">
+					<div class="carousel-caption">
+					</div>
+				</div>
+				<div class="item">
+					<img src="images/img_ad_02.jpg" alt="">
+					<div class="carousel-caption">
+					</div>
+				</div>
+				<div class="item">
+					<img src="images/img_ad_03.jpg" alt="">
+					<div class="carousel-caption">
+					</div>
+				</div>
+			</div>
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+	</div>
+
+</div>
+<!-- FOCUS END -->
+
+<div class="container computer">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="items-group">
+				<div class="items-computer clear ok">
+					<span class="itemstext">业务流运营可视</span>
+					<span class="hovericon"></span>
+				</div>
+				<div class="items-computer clear">
+					<span class="itemstext">在线创建业务流</span>
+					<span class="hovericon"></span>
+				</div>
+				<div class="items-computer clear">
+					<span class="itemstext">应用基础实施可视化</span>
+					<span class="hovericon"></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<img id="computGraph" src="images/img_graph.png" class="img-responsive" />
+		</div>
+		<div class="col-md-3">
+			<div id="computGraphText">
+				<h2>业务流运行可视</h2>
+				<p>业务流运行状态可视，关注业务端到端的运行，直观呈现业务流运行的状态、问题和瓶颈</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container box3">
+	<div class="row box3-first">
+		<div class="box-main clearfix">
+			<div class="box-center pull-left">
+				<img src="images/btn_ico_01.png" class="img-responsive" />
+				<p>领导运营驾驶舱</p>
+			</div>
+			<div class="box-center pull-right">
+				<img src="images/btn_ico_02.png" class="img-responsive" />
+				<p>产品月度运营报告</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="row box3-btns">
+		<div class="col-md-3 text-center">
+			<a href="#">
+				<img src="images/btn_ico_03.png" data-hover="images/btn_ico_03_mouseOn.png" class="img-responsive" />
+				<p>eSee在线</p>
+			</a>
+		</div>
+		<div class="col-md-3 text-center">
+			<a href="#">
+				<img src="images/btn_ico_04.png" data-hover="images/btn_ico_04_mouseOn.png" class="img-responsive" />
+				<p>业务运行可视化</p>
+			</a>
+		</div>
+		<div class="col-md-3 text-center">
+			<a href="#">
+				<img src="images/btn_ico_05.png" data-hover="images/btn_ico_05_mouseOn.png" class="img-responsive" />
+				<p>产品运行可视化</p>
+			</a>
+		</div>
+		<div class="col-md-3 text-center">
+			<a href="#">
+				<img src="images/btn_ico_06.png" data-hover="images/btn_ico_06_mouseOn.png" class="img-responsive" />
+				<p>监控和告警可视化</p>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="container pfooter">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="images/footer_logo.png" />
+			</div>
+			<div class="col-md-2">
+				<div class="footer-title">eSee在线</div>
+				<li><a href="help\userHelp.html">入门教程</a></li>
+				<li><a href="user.html">我的工作台</a></li>
+				<li><a href="feedback.html">意见反馈</a></li>
+			</div>
+			<div class="col-md-2">
+				<div class="footer-title">业务运营可视化</div>
+				<li><a href="tree.html">业务流运行可视</a></li>
+				<li><a href="index.html">在线创建业务流</a></li>
+				<li><a href="ci.html">应用基础实施可视化</a></li>
+				<li><a href="#">系统诊断自动化</a></li>
+				<li><a href="#">性能和容量可视化</a></li>
+				<li><a href="user.html">我的运营工作台</a></li>
+			</div>
+			<div class="col-md-2">
+				<div class="footer-title">产品运营可视化</div>
+				<li><a href="#">领导运营驾驶舱</a></li>
+				<li><a href="#">产品月度运营报告</a></li>
+				<li><a href="#">产品运营看板</a></li>
+				<li><a href="#">产品质量分析</a></li>
+				<li><a href="#">产品运营蓝皮书</a></li>
+			</div>
+			<div class="col-md-2">
+				<div class="footer-title">监控和告警可视化</div>
+				<li><a href="http://w3.huawei.com/eipvms">EIP集成管道可视</a></li>
+				<li><a href="http://w3.huawei.com/bireport/vfs/public/portals/EDW/portal.sa?xml=edw_monitoring.portal">EDW平台监控可视</a></li>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

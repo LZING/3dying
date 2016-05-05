@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<!-- 引入QUnit -->
+		<link rel="stylesheet" href="http://localhost:8080/mmdb/javascripts/tree/libs/QUnit/qunit-1.12.0.css" />
+		<script type="text/javascript" src="http://localhost:8080/mmdb/javascripts/tree/libs/QUnit/qunit-1.12.0.js"></script>
+		<!-- 引入QUnit END -->
+		
+		<!-- 引入tree.js -->
+		<script type="text/javascript" src="http://localhost:8080/mmdb/javascripts/tree/build/tree.js"></script>
+		
+		<script type="text/javascript" id="testCode">
+		
+		var main = function(){
+			
+			// 定义模块
+			module("jsonToTree");
+			
+			// getTree 测试
+			test("getTree()", function(){
+				var tree;
+				tree = T().getTree();
+				deepEqual( tree, {}, "获取tree");
+				
+			});
+			
+			// setTree 测试
+			test("setTree()", function(){
+				var tree;
+				var o = T();
+				o.setTree({"a":1});
+				tree = o.getTree();
+				deepEqual( tree, {
+					a:1
+				}, "设置tree");
+				
+			});
+			
+			// Main 测试
+			test("Main()", function(){
+				
+				var json, tree;
+				
+				json = {}
+				tree = T(json).getTree();
+			    deepEqual( tree, {}, "空json转换");
+				
+				json = { "a" : true }
+				tree = T(json).getTree();
+			    deepEqual( tree, { a:true }, "只有一级并且只有一个成员");
+			
+				json = { "a" : true, "b": false, "c": 0 };
+				tree = T(json).getTree();
+			    deepEqual( tree, { 
+					a : true,
+					b : false,
+					c : 0
+				}, "只有一级并且有多个成员");
+				
+				json = { "level1-level2": 1 };
+				tree = T(json).getTree();
+			    deepEqual( tree, {
+					level1 : {
+						childrenNode:{
+							level2 : 1
+						}
+					}
+				}, "两级，但只有一个成员");
+				
+				json = { "level1-level2-level3": 1 };
+				tree = T(json).getTree();
+			    deepEqual( tree, {
+					level1 : {
+						childrenNode : {
+							level2 : {
+								childrenNode: {
+									level3: 1
+								}
+							}						
+						}
+					}
+				}, "三级，但只有一个成员");
+				
+				json = { "level1-level2-level3": 1, "level1-level1-level4":2 };
+				tree = T(json).getTree();
+			    deepEqual( tree, {
+					level1 : {
+						childrenNode : {
+							level1:{
+								childrenNode: {
+									level4: 2
+								}
+							},
+							level2 : {
+								childrenNode: {
+									level3: 1
+								}
+							}						
+						}
+					}
+				}, "三级，有多个成员");
+
+				
+				json = { "level1-level2-level3": 1, "level1-level1-level4":2, "level2-level1":1, "level3":5, "level2-level2-level1":2 };
+				tree = T(json).getTree();
+			    deepEqual( tree, {
+					level1 : {
+						childrenNode: {
+							level1: {
+								childrenNode: {
+									level4: 2
+								}
+							},
+							level2: {
+								childrenNode: {
+									level3: 1
+								}
+							}
+						}
+					},
+					level2:{
+						childrenNode: {
+							level1: 1,
+							level2: {
+								childrenNode: {
+									level1: 2
+								}
+							}
+						}
+					},
+					level3:5,
+				}, "多级，有多个成员");
+			
+			});
+			
+			
+		};
+
+		window.onload = main;
+		
+		</script>
+		
+	</head>
+	<body>
+		<h1 id="qunit-header">Tree单元测试</h1>
+		<h2 id="qunit-banner"></h2>	
+		<h2 id="qunit-userAgent"></h2>
+		<ol id="qunit-tests"></ol>
+	</body>
+</html>

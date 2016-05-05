@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="256px" height="256px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
+<g>
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="150.626" y1="237.6914" x2="57.5655" y2="144.6309">
+			<stop  offset="0" style="stop-color:#A1A1A1"/>
+			<stop  offset="1" style="stop-color:#FCFCFC"/>
+		</linearGradient>
+		
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_1_)" stroke="#999899" stroke-width="2" stroke-miterlimit="10" d="
+			M180.976,174.98V205c0,10.518-34.427,19.037-76.88,19.037c-42.453,0-76.881-8.52-76.881-19.037v-30.02H180.976z"/>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="143.7061" y1="214.5908" x2="64.4852" y2="135.37">
+			<stop  offset="0" style="stop-color:#A1A1A1"/>
+			<stop  offset="1" style="stop-color:#FCFCFC"/>
+		</linearGradient>
+		
+			<ellipse fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_2_)" stroke="#999899" stroke-width="2" stroke-miterlimit="10" cx="104.095" cy="174.98" rx="76.881" ry="19.037"/>
+	</g>
+	<g>
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="150.626" y1="192.0518" x2="57.5648" y2="98.9906">
+			<stop  offset="0" style="stop-color:#A1A1A1"/>
+			<stop  offset="1" style="stop-color:#FCFCFC"/>
+		</linearGradient>
+		
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_3_)" stroke="#999899" stroke-width="2" stroke-miterlimit="10" d="
+			M180.976,129.341v30.021c0,10.514-34.427,19.037-76.88,19.037c-42.453,0-76.881-8.523-76.881-19.037v-30.021H180.976z"/>
+		<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="143.7061" y1="168.9521" x2="64.4846" y2="89.7306">
+			<stop  offset="0" style="stop-color:#A1A1A1"/>
+			<stop  offset="1" style="stop-color:#FCFCFC"/>
+		</linearGradient>
+		
+			<ellipse fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_4_)" stroke="#999899" stroke-width="2" stroke-miterlimit="10" cx="104.095" cy="129.341" rx="76.881" ry="19.038"/>
+	</g>
+	<g>
+		<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="150.626" y1="146.4092" x2="57.5648" y2="53.348">
+			<stop  offset="0" style="stop-color:#A1A1A1"/>
+			<stop  offset="1" style="stop-color:#FCFCFC"/>
+		</linearGradient>
+		
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_5_)" stroke="#999899" stroke-width="2" stroke-miterlimit="10" d="
+			M180.976,83.698v30.021c0,10.515-34.427,19.037-76.88,19.037c-42.453,0-76.881-8.522-76.881-19.037V83.698H180.976z"/>
+		<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="143.7061" y1="123.3096" x2="64.4852" y2="44.0888">
+			<stop  offset="0" style="stop-color:#A1A1A1"/>
+			<stop  offset="1" style="stop-color:#FCFCFC"/>
+		</linearGradient>
+		
+			<ellipse fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_6_)" stroke="#999899" stroke-width="2" stroke-miterlimit="10" cx="104.095" cy="83.698" rx="76.881" ry="19.038"/>
+	</g>
+	<g>
+		<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="150.626" y1="100.7705" x2="57.5648" y2="7.7093">
+			<stop  offset="0" style="stop-color:#A1A1A1"/>
+			<stop  offset="1" style="stop-color:#FCFCFC"/>
+		</linearGradient>
+		
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_7_)" stroke="#999899" stroke-width="2" stroke-miterlimit="10" d="
+			M180.976,38.059v30.021c0,10.515-34.427,19.037-76.88,19.037c-42.453,0-76.881-8.522-76.881-19.037V38.059H180.976z"/>
+		<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="143.7061" y1="77.6699" x2="64.4846" y2="-1.5516">
+			<stop  offset="0" style="stop-color:#A1A1A1"/>
+			<stop  offset="1" style="stop-color:#FCFCFC"/>
+		</linearGradient>
+		
+			<ellipse fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_8_)" stroke="#999899" stroke-width="2" stroke-miterlimit="10" cx="104.095" cy="38.059" rx="76.881" ry="19.037"/>
+	</g>
+</g>
+<path fill="#4BAAC6" stroke="#0A5F9A" stroke-width="4" stroke-miterlimit="10" d="M221.971,175.737
+	c-2.938,0-5.646,0.969-7.824,2.615l-8.927,0.259v-32.939c0-2.102-1.697-3.798-3.799-3.798h-32.958l0.278-9.534
+	c1.646-2.178,2.615-4.888,2.615-7.825c0-7.198-5.837-13.029-13.029-13.029s-13.029,5.831-13.029,13.029
+	c0,2.938,0.969,5.647,2.615,7.825l0.278,9.534h-32.958c-2.103,0-3.799,1.696-3.799,3.798v32.915l8.063-0.234
+	c2.177-1.646,4.887-2.615,7.825-2.615c7.197,0,13.028,5.837,13.028,13.028c0,7.192-5.831,13.029-13.028,13.029
+	c-2.938,0-5.648-0.969-7.825-2.614l-8.063-0.235v32.915c0,2.102,1.696,3.798,3.799,3.798h32.949l-0.27-9.269
+	c-1.646-2.178-2.615-4.887-2.615-7.824c0-7.198,5.837-13.029,13.029-13.029s13.029,5.831,13.029,13.029
+	c0,2.938-0.969,5.646-2.615,7.824l-0.27,9.269h32.949c2.102,0,3.799-1.696,3.799-3.798v-32.939l8.927,0.26
+	c2.178,1.646,4.887,2.614,7.824,2.614c7.198,0,13.029-5.837,13.029-13.029C235,181.574,229.169,175.737,221.971,175.737z"/>
+</svg>

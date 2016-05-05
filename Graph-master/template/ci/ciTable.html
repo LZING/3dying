@@ -1,0 +1,19 @@
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>分类</th>
+			<th>标识</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody>
+	{{#each list}}
+	<tr nid="{{_neo4jid_}}">
+		<td>{{_categoryId_}}</td>
+		<td>{{_name_}}</td>
+		<td><button class="btn btn-xs btn-info">打开</button></td>
+	</tr>
+	{{/each}}
+	</tbody>
+</table>

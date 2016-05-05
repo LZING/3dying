@@ -1,0 +1,38 @@
+
+<div class="selectLevel" id="selectLevel">
+	<div class="form-horizontal">
+		<div class="form-body">
+
+			<div class="form-group">
+				<div class="col-md-12">
+					<p class="form-control-static">按层级查询</p>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-md-12">
+					<select class="form-control" id="selectLevel">
+						{{#each list}}
+						<option value="{{this}}" {{#ifCond this "==" ../currLevel}}selected{{/ifCond}}>&nbsp;&nbsp;{{this}}层</option>
+						{{/each}}
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-md-12">
+					<button class="btn btn-block btn-primary" id="searchLevelBtn">
+						<i class="fa fa-search"></i>
+						查询
+					</button>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-md-12">
+					<p class="form-control-static alert-warning">注：如果层级过多可能会导致页面不流畅</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+<div class="attr-edit">
+	<h4 class="attr-tip">阀值修改</h4>
+	{{#each list}}
+	<div class="attr-row">
+		<span>
+			<div class="attr-label">
+			{{name}}
+            </div>
+		</span>
+
+		<input class="treeText treeTextmg" name="{{name}}" {{#if update}}{{else}}readonly{{/if}} value="{{defaultVal}}" />
+	</div>
+	{{/each}}
+</div>
+

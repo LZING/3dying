@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>业务流切换视图</title>
+    <!--[if lt IE 9]><script>window.location.href="browser-support.html";</script><![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.2.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="dashboard/css/chart/default.css" />
+    <link rel="stylesheet" type="text/css" href="dashboard/css/chart/dashboard.css" />
+
+
+    <!--<script src="plugins/JSApi/JSApi-0.1.0.js"></script>-->
+    <script src="plugins/jquery/jquery-1.11.1.min.js"></script>
+    <script src="plugins/jquery/jquery.mousewheel.js"></script>
+    <script src="dashboard/plugins/d3.min.js"></script>
+    <script src="plugins/md5/md5.min.js"></script>
+    <script src="../dwr/engine.js"></script>
+    <!-- <script src="../dwr/interface/viewInfoBuz.js"></script>
+    <script src="../dwr/interface/totalInfoHamaBuz.js"></script> -->
+    <!--<script src="../dwr/interface/kpiBuz.js"></script>-->
+    <script src="../scripts/js/init.js"></script>
+    <script src="../scripts/js/remote.js"></script>
+    <script src="plugins/mxView/nameSpace_exttend.js"></script>
+    <script src="config/defines.js"></script>
+    <script src="plugins/mxGraph/mxClient.js"></script>
+    <script src="plugins/mxGraph/Graph.js"></script>
+    <script src="plugins/mxGraph/Graph_extend.js"></script>
+    <script src="plugins/mxGraph/Editor.js"></script>
+    <script src="dashboard/plugins/register.js"></script>
+    <script src="dashboard/dist/chartview.debug.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="dashboard/plugins/uchart.debug.js"></script>
+    <script src="js/dropElement.js"></script>
+    <script src="js/chartInstance.js"></script>
+    <script src="js/showDashboard.js"></script>
+    <script src="plugins/mxView/showscriptdialog.js"></script>
+    <script src="plugins/mxView/eventLibs.js"></script>
+    <script src="plugins/mxView/umxoutline.js"></script>
+    <script src="plugins/mxView/hama/hamamxbrige.js"></script>
+    <script src="plugins/mxView/hama/demodata.js"></script>
+    <script src="plugins/mxView/hama/hamamodel.js"></script>
+    <script src="plugins/mxView/umxcommon.js"></script>
+
+    <script>
+        var mxview = null;
+        window.onload = function(){
+            mxview = new umxcommon();
+            mxview.drawRender();
+            var eventPool = getumxEventInstance();
+            eventPool.fireEvent("changetheme",mxview,"black");
+            eventPool.fireEvent("changeoutlinetheme",mxview.outLineInstance,"black");
+            setInterval(function () {
+                mmdb.hamadata.nodeTrasProcess(mxview);
+                mmdb.hamadata.nodeTransScript(mxview);
+            },1000);
+
+
+        };
+        window.onresize = function () {
+            if(mxview){
+                var eventPool = getumxEventInstance();
+                mxview.updateRender();
+                mxview.editor.graph.zoomToCenter();
+                mxview.initChart();
+                eventPool.fireEvent("changetheme",mxview,"black");
+                eventPool.fireEvent("changeoutlinetheme",mxview.outLineInstance,"black");
+            }
+        }
+    </script>
+</head>
+<body style="margin: 0px;padding: 0px;overflow: hidden">
+<div id="theme" style="display: block;position: absolute;overflow: hidden;">
+</div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta name="keywords" content="3dsmax,3dmax,maya,3d模型,3d模型免费下载,游戏美术,3d设计师交流论坛,3d建模师,3d模型在线展示,网页嵌入3D模型,分享3D模型,上传3D模型,3d model">
+<meta name="description" content="3dying —— 最新最酷的3D设计师社交网站，提供3D模型上传、3D模型在线展示、3D模型外链分享。支持多种流行格式的3D模型直接上传，并可在线展示，以及插入到任何网页中。">
+<title>3dying ——最新最酷的3D设计师社交网站，提供3D模型上传、3D模型在线展示、3D模型外链分享</title>
+<link href="/Public/css/index.css" rel="stylesheet" type="text/css" />
+<link href="/Public/css/user/register.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.sequence-min.js"></script>
+<script type="text/javascript" src="js/bannnerscroll.js"></script>
+<script type="text/javascript">
+function writeDateInfo()
+{
+        var day="";
+        var month="";
+        var ampm="";
+        var ampmhour="";
+        var myweekday="";
+        var year="";
+        mydate=new Date();
+        myweekday=mydate.getDay();
+        mymonth=mydate.getMonth()+1;
+        myday= mydate.getDate();
+        myyear= mydate.getYear();
+        year=(myyear > 200) ? myyear : 1900 + myyear;
+        if(myweekday == 0)
+        weekday=" 星期日";
+        else if(myweekday == 1)
+        weekday=" 星期一";
+        else if(myweekday == 2)
+        weekday=" 星期二";
+        else if(myweekday == 3)
+        weekday=" 星期三";
+        else if(myweekday == 4)
+        weekday=" 星期四";
+        else if(myweekday == 5)
+        weekday=" 星期五";
+        else if(myweekday == 6)
+        weekday=" 星期六";
+        document.write(year+"年"+mymonth+"月"+myday+"日"+weekday);
+}
+function tab(name,num,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById(name+"_"+"content"+i);
+menu.className=i==num?"selected":"";
+  		con.style.display=i==num?"block":"none";
+}
+}
+</script>
+<script type="text/javascript"> 
+function scrollx(p) { 
+var d = document, dd = d.documentElement, db = d.body, w = window, o = d.getElementById(p.id), ie6 = /msie 6/i.test(navigator.userAgent), style, timer; 
+if (o) { 
+  cssPub = ";position:"+(p.f&&!ie6?'fixed':'absolute')+";"+(p.t!=undefined?'top:'+p.t+'px;':'bottom:0;'); 
+  if (p.r != undefined && p.l == undefined) { 
+   o.style.cssText += cssPub + ('right:'+p.r+'px;'); 
+  } else { 
+   o.style.cssText += cssPub + ('margin-left:'+p.l+'px;'); 
+  } 
+  if(p.f&&ie6){ 
+   cssTop = ';top:expression(documentElement.scrollTop +'+(p.t==undefined?dd.clientHeight-o.offsetHeight:p.t)+'+ "px" );'; 
+   cssRight = ';right:expression(documentElement.scrollright + '+(p.r==undefined?dd.clientWidth-o.offsetWidth:p.r)+' + "px")'; 
+   if (p.r != undefined && p.l == undefined) { 
+    o.style.cssText += cssRight + cssTop; 
+   } else { 
+    o.style.cssText += cssTop; 
+   } 
+   dd.style.cssText +=';background-image: url(about:blank);background-attachment:fixed;'; 
+  }else{ 
+   if(!p.f){ 
+    w.onresize = w.onscroll = function(){ 
+     clearInterval(timer); 
+     timer = setInterval(function(){ 
+      //双选择为了修复chrome 下xhtml解析时dd.scrollTop为 0 
+      var st = (dd.scrollTop||db.scrollTop),c; 
+      c = st - o.offsetTop + (p.t!=undefined?p.t:(w.innerHeight||dd.clientHeight)-o.offsetHeight); 
+      if(c!=0){ 
+       o.style.top = o.offsetTop + Math.ceil(Math.abs(c)/10)*(c<0?-1:1) + 'px'; 
+      }else{ 
+       clearInterval(timer); 
+      } 
+     },10) 
+    } 
+   } 
+  } 
+} 
+} 
+</script> 
+</head>
+
+<body>
+<!--qqbegin--><div style="z-index: 0; position: fixed; width: 76px; height: 24px; top: 15%; left: 20px;">
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=712097186&site=qq&menu=yes">
+<img border="0" complete="true" src="images/qq2.png" alt="点击这里给我发消息" title="欢迎来到3d鹰" data-pinit="registered">
+</a>
+</div><!--qqend-->
+<div class="header"><!--header头部开始-->
+    <div class="top-nav"><!--top-nav顶部导航开始-->
+       <div class="navs"><!--navs开始-->
+         <div class="times"><!--times时间开始-->
+           <img src="images/top01.gif" />&nbsp;今天是：<script type="text/javascript">writeDateInfo();</script>
+         </div><!--times时间结束-->                  
+         <div class="set"><!--set开始-->
+           <a class="sy" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.123.com');" style="cursor:hand;">设为首页</a>
+           <a class="sc" onclick="window.external.AddFavorite(location.href,document.title);" style="cursor:hand;">加入收藏</a>
+         </div><!--set结束-->
+         <div class="login"><!--login开始-->
+           <a href="">登录</a>|<a href="">注册</a>|<a href="">论坛</a>
+         </div><!--login结束-->
+         <div class="welcome"><!--welcome开始-->
+          您好，欢迎来到3D鹰！
+         </div><!--welcome结束-->
+       </div><!--navs结束-->
+    </div><!--top-nav顶部导航结束-->
+    <div class="clear"></div>
+    <div class="head"><!--head开始-->
+       <div class="logo"><a href=""><img src="images/logo.jpg" /></a></div>
+       <div class="ads"> <img src="images/xc.jpg" /></div>
+       <div class="search">
+         <div class="search-one">
+          <a href=""><img src="images/icon_bookmark.gif" /></a><a href=""><img src="images/icon_weibo.gif" /></a><a href=""><img src="images/icon_mobile.gif" /></a>
+         </div>
+         <div class="search-two">
+           <input class="enter" name="keyword" type="text" value="请输入关键字... ..."/>
+           <input class="btn" name="" type="button"/>
+         </div>
+       </div>
+    </div><!--head结束-->
+    <div class="clear"></div>
+  </div><!--header头部结束-->
+  <div class="clear"></div>
+  <div class="content"><!--content内容板块开始-->
+    
+    <div id="page">
+      <div id="panel_main">
+        <div id="label_main_title">关于3D鹰</div>
+        <p>3D鹰是什么？</p>
+        <p>3dying.com是全新的三维内容分享展示平台：</p>
+        <p>为3D设计师提供免费、开放、自由的3D作品在线展示交流渠道；</p>
+        <p>为网络上有Web3D需求的用户和站长提供高质量的3D内容托管和嵌入服务。</p>
+        <p>3dying.com基于最新的HTML5技术，第一次允许实时渲染的高质量3D作品在网页中原生展示；依靠强大的双核3D引擎支持所有的主流浏览器。</p>
+        <p>在3dying.com，您可以将3D模型一键上传到互联网，与更多的业内同行与普通大众分享您的作品；您可以在这里找到任何您需要的Web3D素材，并方便的嵌入到您的任何网站中，构造您自己的炫酷Web3D网站。</p>
+        <p>除此之外，在服务器集群云技术的强大支持下，3dying.com支持包括max(3ds Max)和mb(Maya)在内的所有流行模型格式，让3D设计师可以随时随地展示自己的作品。</p>
+        <p>3dying.com致力于使用最新颖的技术为美术设计师提供超凡的在线3D展示与分享服务，将您的3D作品分享给互联网海量的观众，将您的个人网站带入全新的3D时代。</p>
+      </div>
+    </div>
+    
+  </div><!--content内容板块结束-->
+  <div class="clear"></div>
+  <div class="foot"><!--foot开始-->
+    <div class="foots"><!--foots开始-->
+      <div class="foots-one"><!--foots-one开始-->
+         <div class="one-left"><img src="images/3D.jpg" /></div>
+         <div class="one-right">
+            <img src="images/tel.jpg" />
+            <p>每日8:30AM-18:30PM[包括周六日]/午休12:00PM-13:30PM[法定日休息]</p>
+         </div>
+      </div><!--foots-one结束-->
+      <div class="clear"></div>
+      <div class="foots-two"><!--foots-two开始-->
+         <div class="two-one">
+             <div class="foot-title">关于我们</div>
+             <ul>
+               <li><a href="" >科技创新</a></li>
+               <li><a href="" >合作共赢</a></li>
+               <li><a href="" >诚信高效</a></li>
+             </ul>
+          </div>
+          <div class="two-one">
+             <div class="foot-title">帮助支持</div>
+             <ul>              
+               <li><a target="_blank" href="/other/about.html" >关于3D鹰</a></li>
+               <li><a target="_blank" href="/other/about" >联系我们</a></li>
+               <li><a target="_blank" href="" >帮助信息</a></li>
+             </ul>
+          </div>
+          <div class="two-one">
+             <div class="foot-title">用户相关</div>
+             <ul>
+               <li><a href="" >服务条款</a></li>
+               <li><a href="" >隐私政策</a></li>
+               <li><a href="" >版权政策</a></li>
+             </ul>
+          </div>
+          <div class="two-one">
+             <div class="foot-title">推荐服务</div>
+             <ul>
+               <li><a href="" >手机端@客户端</a></li>
+               <li><a target="_blank" href="http://weibo.com/5110073943/profile?topnav=1&wvr=5&from=company&user=1" >关注本站新浪微博</a></li>
+               <li><a target="_blank" href="http://4006581521.114.qq.com/" >关注本站腾讯微博</a></li>
+               
+             </ul>
+          </div>
+          <div class="two-one">
+             <div class="foot-title">其他信息</div>
+             <ul style="color:#848484;">
+               <li style="color:#848484; font-size:12px;">3D鹰版权所有</li>
+               <li style="color:#848484; font-size:12px;">Copyright © 2013 </li>
+               <li style="color:#848484; font-size:12px;">冀ICP备13021810号-1 </li>
+             </ul>
+          </div>
+        
+      </div><!--foots-two结束-->
+    </div><!--foots结束-->
+  </div><!--foot结束-->
+  <!--<div id="float_left">
+    <div class="float-title">3D模型分类</div>
+    <ul class="float-fl">
+      <li style="background:#ba9a4f;"><a style="color:#FFF;" href="">创意模型</a></li>
+      <li><a href="">艺术模型</a></li>
+      <li><a href="">设计模型</a></li>
+      <li><a href="">工具模型</a></li>
+      <li><a href="">玩具模型</a></li>
+      <li><a href="">建筑模型</a></li>
+    </ul>
+  </div>-->
+<!--<script type="text/javascript"> 
+//左右侧固定浮动的div建议放在html的最低部 
+//右侧固定 
+scrollx({id:'float_right', r:0, t:200, f:1}); 
+//左侧固定 
+scrollx({id:'float_left', t:400, f:1}); 
+//相对父级相定固定 
+scrollx({id:'float_father', l:300, t:200, f:1}); 
+//页面滚动同时滚动固定对像 
+scrollx({id:'float_father_2', l:500, t:300, f:0}); 
+/* 
+scrollx参数说明 
+
+id：浮动对象的id 
+r：右边距（窗口右边距，不写为靠左浮动） 
+l：左边距（距离父级对象的左边距） “r”和“l”只能有其中一个参数 
+t：上边距（默认贴着底边，0是贴着顶边） 
+f：1表示固定（不写或者0表示滚动） 
+*/ 
+</script>-->
+</body>
+</html>

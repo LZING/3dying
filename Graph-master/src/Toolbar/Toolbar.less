@@ -1,0 +1,168 @@
+@item-base-color: #999;
+@item-base-color-hover: #666;
+@dividing-line-color: #999;
+@fa-size: 16px;
+@item-margin: 3px;
+@dividing-line-width: 1px;
+@dividing-line-height: 15px;
+@dividing-line-margin: 2px 10px;
+@item-width: 16px;
+@icon-width: 16px;
+@icon-height: 16px;
+@icon-image-url: "../images/new/icn_btn.png";
+@icon-margin: 5px;
+@rightColor: #47A447;
+@height: 30px;
+
+.Toolbar {
+
+	height: @height;
+	padding: (@height - @icon-height) / 2;
+	position: relative;
+	//background: #EFEFEF;
+
+	.Toolbar-left {
+		height: @icon-height;
+	}
+
+	.Toolbar-right {
+		position: absolute;
+		height: @icon-height;
+		right: 10px;
+		top: (@height - @icon-height) / 2;
+		z-index:99;
+
+		.Toolbar-item {
+			i {
+				color: @rightColor;
+				cursor: pointer;
+
+			}
+		}
+	}
+
+	.dividing-line {
+		float: left;
+		width: @dividing-line-width;
+		margin: @dividing-line-margin;
+		height: @dividing-line-height;
+		background: @item-base-color-hover;
+		opacity: 0.4;
+	}
+
+	.Toolbar-item {
+		width: @item-width;
+		float: left;
+		list-style: none;
+		text-align: center;
+		margin: 0 @item-margin;
+
+		i {
+			color: @item-base-color;
+			font-size: @fa-size;
+			cursor: pointer;
+		}
+
+		i:hover {
+			color: @item-base-color-hover;
+		}
+
+		.icon {
+			display: block;
+			width: @icon-width;
+			height: @icon-height;
+			background-image: url(@icon-image-url);
+			background-repeat: no-repeat;
+			cursor: pointer;
+			opacity: 0.7;
+		}
+
+		.icon:hover {
+			opacity: 1;
+		}
+
+
+		.icon-newfile { background-position: -@icon-width * 0 0; }                 // 新建视图
+		.icon-openfile { background-position: -@icon-width * 1 0; }            // 打开视图
+		.icon-savefile { background-position: -@icon-width * 2 0; }            // 保存视图
+		.icon-updatefile { background-position: -@icon-width * 3 0; }          // 更新视图
+		.icon-zoomtocenter { background-position: -@icon-width * 4 0; }        // 居中显示
+		.icon-zoomProportional { background-position: -@icon-width * 35 0;}  // 原始大小
+		.icon-zoomIn { background-position: -@icon-width * 5 0; }              // 放大
+		.icon-zoomOut { background-position: -@icon-width * 6 0; }             // 放大
+		.icon-undo {background-position: -@icon-width * 7 0;}                 // 撤销
+		.icon-redo {background-position: -@icon-width * 8 0;}                 // 重做
+		.icon-delete {background-position: -@icon-width * 9 0;}               // 删除
+		.icon-link { background-position: -@icon-width * 10 0; }               // 链接
+		.icon-fillcolor { background-position: -@icon-width * 11 0;}           // 填充颜色
+		.icon-strokecolor { background-position: -@icon-width * 12 0; }        // 边框颜色
+		.icon-shadow { background-position: -@icon-width * 13 0; }             // 阴影
+		.icon-fontFamily { background-position: -@icon-width * 43 0; }         // 字体
+		.icon-fontColor { background-position: -@icon-width * 15 0; }          // 字体颜色
+		.icon-orderUp { background-position: -@icon-width * 32 0; }          // 向上
+		.icon-orderDown { background-position: -@icon-width * 33 0; }          // 向上
+		.icon-changeIcon { background-position: -@icon-width * 34 0; }          // 更换图标
+		.icon-align { background-position: -@icon-width * 36 0; }          // 文本对齐
+		.icon-align-left {background-position:-@icon-width * 36 0; }        // 左对齐
+		.icon-align-center {background-position: -@icon-width * 37 0;}      // 中对齐
+		.icon-align-right {background-position:  -@icon-width * 38 0;}      // 右对齐
+		.icon-align-top {background-position: -@icon-width * 39 0;}         // 顶对其
+		.icon-align-middle {background-position:  -@icon-width * 40 0;}     // 中对齐
+		.icon-align-bottom {background-position: -@icon-width * 41 0;}      // 底对齐
+		.icon-fontSize {background-position: -@icon-width * 42 0;}      // 文字大小
+		.icon-bold {background-position: -@icon-width * 16 0;}      // 加粗
+		.icon-italic {background-position: -@icon-width * 17 0;}      // 斜体
+		.icon-underline {background-position: -@icon-width * 18 0;}      // 斜体
+		.icon-line-straight { background-position: -@icon-width * 46 0; } // 线条样式
+		.icon-line-entity-relation { background-position: -@icon-width * 47 0; }
+		.icon-line-elbow-horizontal { background-position: -@icon-width * 44 0; }
+		.icon-line-elbow-vertical {background-position: -@icon-width * 45 0; }
+		.icon-line-segment { background-position:-@icon-width * 48 0; }
+		.icon-line-orthogonal { background-position: -@icon-width * 49 0; }
+		.icon-start-classic { background-position: -@icon-width * 72 0; }
+		.icon-start-noarrow { background-position: -@icon-width * 50 0; }
+		.icon-start-open { background-position: -@icon-width * 71 0; }
+		.icon-start-block {background-position: -@icon-width * 70 0;}
+		.icon-start-oval { background-position: -@icon-width * 69 0; }
+		.icon-start-diamond {background-position: -@icon-width * 68 0;}
+		.icon-start-thindiamond {background-position: -@icon-width * 67 0;}
+		.icon-start-classictrans {background-position: -@icon-width * 66 0;}
+		.icon-start-blocktrans {background-position: -@icon-width * 65 0;}
+		.icon-start-ovaltrans {background-position: -@icon-width * 64 0;}
+		.icon-start-diamondtrans {background-position: -@icon-width * 63 0;}
+		.icon-start-thindiamondtrans {background-position: -@icon-width * 62 0;}
+		.icon-end-classic {background-position: -@icon-width * 51 0;}
+		.icon-end-noarrow {background-position: -@icon-width * 50 0;}
+		.icon-end-open { background-position: -@icon-width * 52 0; }
+		.icon-end-block {background-position: -@icon-width * 53 0;}
+		.icon-end-oval {background-position: -@icon-width * 54 0;}
+		.icon-end-diamond {background-position: -@icon-width * 55 0;}
+		.icon-end-thindiamond {background-position: -@icon-width * 56 0;}
+		.icon-end-classictrans {background-position: -@icon-width * 57 0;}
+		.icon-end-blocktrans {background-position: -@icon-width * 58 0;}
+		.icon-end-ovaltrans {background-position: -@icon-width * 59 0;}
+		.icon-end-diamondtrans {background-position: -@icon-width * 60 0;}
+		.icon-end-thindiamondtrans {background-position: -@icon-width * 61 0;}
+		.icon-grid {background-position: -@icon-width * 22 0;}
+		.icon-guides {background-position: -@icon-width * 23 0;}
+		.icon-setGraphBgImg {background-position: -@icon-width * 24 0;}
+		.icon-delGraphBgImg {background-position: -@icon-width * 25 0;}
+		.icon-table {background-position: -@icon-width * 26 0;}
+		.icon-kpi {background-position: -@icon-width * 27 0;}
+		.icon-graph {background-position: -@icon-width * 28 0;}
+		.icon-monitor {background-position: -@icon-width * 29 0;}
+		.icon-preview {background-position: -@icon-width * 30 0;}
+		.icon-autoswitching {background-position: -@icon-width * 31 0;}
+		.icon-search-node {background-position: -@icon-width * 73 0;}
+		.icon-search-path {background-position: -@icon-width * 74 0;}
+		.icon-search-clear {background-position: -@icon-width * 75 0;}
+
+		.dropdown-menu {
+			.icon {
+				margin: @icon-margin;
+			}
+		}
+
+	}
+}
+
