@@ -532,7 +532,7 @@
         <div class="am-modal-hd am-text-left">登录                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
         </div>
         <div class="am-modal-bd am-text-left">
-            <form class="am-form" action="/Public/app/login" method="post">
+            <form class="am-form" action="/user/login" method="post">
                 <div class="am-form-group">
                     <label for="mobile" class="control-label">手机号/邮箱</label>
                     <input type="text" name="username" placeholder="请输入账号">
