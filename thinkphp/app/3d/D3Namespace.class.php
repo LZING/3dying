@@ -89,6 +89,34 @@ class D3Namespace {
         return $result;
     }
 
+
+    public static function showPageJson2($limit = 12, $type = 1) {
+
+        $where    = 'del=0';
+
+        $page     = (int)HttpNamespace::getGET('p', 1);
+        $page = $page >0 ? $page : 1;
+        $offset   = ($page-1) * $limit;
+
+        if ($type == 1) {
+            $order = ' id desc';
+        } elseif($type == 2){
+            $order = ' `like` desc,id desc';
+        }else {
+            $order = ' `read` desc,id desc';
+        }
+        $sqlCount = "SELECT count(*) as count FROM `3d` WHERE {$where}";
+        $sql      = "SELECT * FROM `3d` WHERE {$where} ORDER BY ". $order ." LIMIT {$offset},{$limit}";
+
+        $num = DBMysqli::getInstance()->getRow($sqlCount);
+
+        $result[]   = DBMysqli::getInstance()->getAll($sql);
+        $result[] = $num['count'];
+
+        return $result;
+    }
+
+
     public static function showPage($limit = 12, $type = 0) {
 
         $where    = 'del=0';
