@@ -76,7 +76,7 @@ LITHO.Lithophane.prototype = {
         this.maxOutputWidth = this.maxOutputDimensionInMM - 2 * this.borderThicknessInMM,
         this.maxOutputDepth = this.maxOutputDimensionInMM - 2 * this.borderThicknessInMM,
         this.maxOutputHeight = this.actualThicknessInMM - this.minThicknessInMM,
-        this.HeightInMM = this.maxOutputDimensionInMM,
+        this.HeightInMM = this.maxOutputDoimensionInMM,
         this.WidthInMM = this.maxOutputDimensionInMM,
         this.ThickInMM = this.actualThicknessInMM,
         this.zScale = this.maxOutputHeight / 255
@@ -93,6 +93,10 @@ LITHO.Lithophane.prototype = {
         		alert("错误");
         		return;
         	}
+            if(!isLogin){
+                $('#loginDialog').modal();
+                return false;
+            }
         	//查看图片
         	//window.open(e.scene3d.renderer.domElement.toDataURL('image/png'), 'mywindow');
         	//return;
@@ -132,7 +136,7 @@ LITHO.Lithophane.prototype = {
             	    //a.setAttribute("id", "openwin");
             	    //document.body.appendChild(a);
             	    //a.click();
-                    location.href='/apps/print#'+this.responseText;
+                    alert('保存成功');
             		//window.open("http://www.dayin.la/apps/print.html#" + this.responseText);
                 } else {
                 	alert(this.responseText);

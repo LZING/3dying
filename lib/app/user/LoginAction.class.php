@@ -19,7 +19,7 @@ class LoginAction extends BaseAction{
                 $this->error = array('code' => 1, 'msg' => '用户名和密码不能为空');
             } else {
                 if (UserNamespace::login($username, $password, $save)) {
-                    $this->error = array('code' => 0, 'msg' => '');
+                    $this->error = array('code' => 0, 'msg' => '','name' => $username);
                 } else {
                     $this->error = array('code' => 1, 'msg' => '用户名或密码错误');
                 }

@@ -28,9 +28,6 @@
     <![endif]-->
     <script type="text/javascript" src="/Public/static/amazeui/js/amazeui.js"></script>
 </head>
-<script>
-    var isLogin = <?php echo intval($_SESSION['user']['id'])?>;
-</script>
 <body>
 <?php $this->load('apps/header.php');?>
 <style>
@@ -145,7 +142,7 @@
             <div class="am-panel-bd">
                 <div class="tile" style="display:none;" id="actionBtn">
                     <button type="button" class="am-btn am-btn-primary" id="exportStl">导出STL</button>
-                    <button class="am-btn am-btn-danger" id="onlineSaveAndPrint" data-url="/swf/model/?type=1">在线打印</button>
+                    <button class="am-btn am-btn-danger" id="onlineSaveAndPrint" data-url="/swf/model/?type=1">保存</button>
                 </div>
             </div>
         </div>
@@ -223,3 +220,4 @@
 <script type="text/javascript" src="/Public/static/jquery-ui-slide.js"></script>
 </body>
 </html>
+<?php $this->load('apps/footer.php');?>

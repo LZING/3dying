@@ -90,7 +90,7 @@
         </div>
         <div class="tile">
             <button type="button" class="am-btn am-btn-primary am-btn-lg am-disabled" id="exportStl">导出STL</button>
-            <button class="am-btn am-btn-danger am-btn-lg am-disabled" id="saveAndPrintBtn" data-url="/swf/model/?type=5">在线打印</button>
+            <button class="am-btn am-btn-danger am-btn-lg am-disabled" id="saveAndPrintBtn" data-url="/swf/model/?type=5">保存</button>
         </div>
     </div>
 </div>
@@ -201,6 +201,10 @@
             $('#fontScript').remove();
             Render(text,$('#fontStr').val());
         }).on('click', '#saveAndPrintBtn', function() {
+            if(!isLogin){
+                $('#loginDialog').modal();
+                return false;
+            }
             // console.log(stlData());return;
             var fd = new FormData();
             var fileName = "立体文字";
@@ -239,10 +243,10 @@
 //                    a.setAttribute("id", "openwin");
 //                    document.body.appendChild(a);
 //                    a.click();
-                    location.href='/apps/print#'+this.responseText;
+                    alert('保存成功');
                     //window.open("http://www.dayin.la/apps/print#" + this.responseText);
                 } else {
-                    alert(this.responseText);
+                    alert('保存失败,请刷新');
                 }
             };
             xhr.upload.onerror = function (status, statusText) {
@@ -354,3 +358,4 @@
 <script type="text/javascript" src="/Public/js/threejs/text.min.js?_t=20121009"></script>
 </body>
 </html>
+<?php $this->load('apps/footer.php');?>

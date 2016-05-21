@@ -4,7 +4,7 @@
         <div class="panel_img_lib">
             <a href="/user/?type=<?php echo $value['type_id'];?>&id=<?php echo $this->user['id'];?>" class="img_lib label_click" id="img_lib0">
             <?php foreach($value['list'] as $k => $model){?>
-                <img class="img_lib_one img_lib_<?php echo $k > 1 ? DecBin($k) : '0'.DecBin($k);?>" src="<?php echo $model['thumb'];?>">
+                <img class="img_lib_one img_lib_<?php echo $k > 1 ? DecBin($k) : '0'.DecBin($k);?>" src="<?php echo ltrim($model['thumb'], '.');?>">
                 <?php }?>
             </a>
         </div>

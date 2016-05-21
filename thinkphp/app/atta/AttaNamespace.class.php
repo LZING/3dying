@@ -24,7 +24,7 @@ class AttaNamespace {
         if(!is_array($ids)) $ids = (array)$ids;
         if (empty($ids)) return false;
         $sql = "UPDATE `attachment` SET `3d_id` = " . $dId . " WHERE id IN(" . implode(",", $ids) . ") AND `user_id` = ". $user_id;
-        return DBMysqli::getInstance()->insertAndGetId($sql);
+        return DBMysqli::getInstance()->execute($sql);
     }
     public static function getAllAtta($limit = 15) {
     

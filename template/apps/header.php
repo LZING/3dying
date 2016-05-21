@@ -8,12 +8,12 @@
 
         <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
             <?php if(!$_SESSION['user']['id']){?>
-                <div class="am-topbar-right">
+                <div class="am-topbar-right user-info">
                     <button type="button" data-am-modal="{target: '#loginDialog'}" class="am-btn am-btn-primary am-topbar-btn am-btn-sm">登录</button>
                     <a href="/user/register" class="am-btn am-btn-success am-topbar-btn am-btn-sm">注册</a>
                 </div>
             <?php }else {?>
-                <div class="am-topbar-right">
+                <div class="am-topbar-right user-info">
                     <a href="/user/index/typelist" class="am-btn am-btn-success am-topbar-btn am-btn-sm"><?php echo $_SESSION['user']['username'];?></a>
                 </div>
             <?php }?>
@@ -30,3 +30,6 @@
         </div>
     </div>
 </header>
+<script>
+    isLogin = <?php echo intval($_SESSION['user']['id'])?>;
+</script>

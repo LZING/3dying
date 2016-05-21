@@ -28,10 +28,6 @@
     <![endif]-->
     <script type="text/javascript" src="/Public/static/amazeui/js/amazeui.js"></script>
 </head>
-<script>
-    var isLogin = <?php echo intval($_SESSION['user']['id'])?>;
-
-</script>
 <body>
 <?php $this->load('apps/header.php');?>
 <div class="am-g">
@@ -88,12 +84,13 @@
             </div>
             <div class="am-u-md-7">
                 <button type="button" class="am-btn am-btn-primary am-btn-sm" id="exportStl">导出STL</button>
-                <button type="button" class="am-btn am-btn-danger am-btn-sm" id="saveAndPrintBtn" data-url="/swf/model/?type=7">在线打印</button>
+                <button type="button" class="am-btn am-btn-danger am-btn-sm" id="saveAndPrintBtn" data-url="/swf/model/?type=7">保存到大格科技</button>
             </div>
         </div>
         <div style="height:600px;" id="container"></div>
     </div>
-</div>        <div class="am-modal" tabindex="-1" id="loginDialog">
+</div>
+<div class="am-modal" tabindex="-1" id="loginDialog">
     <div class="am-modal-dialog">
         <div class="am-modal-hd am-text-left">登录                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
         </div>
@@ -121,3 +118,4 @@
 <script type="text/javascript" src="/Public/js/threejs/draw.min.js?_t111011"></script>
 </body>
 </html>
+<?php $this->load('apps/footer.php');?>

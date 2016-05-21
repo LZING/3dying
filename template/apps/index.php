@@ -42,9 +42,7 @@
         height: 30px;
     }
 </style>
-<script>
-    var isLogin = <?php echo intval($_SESSION['user']['id'])?>;
-</script>
+
 <div class="am-g">
     <div class="am-u-lg-1 am-u-md-12" style="padding-right:0">
         <div class="color-box">
@@ -84,16 +82,17 @@
             <h3 class="tile-title">请充分发挥你的想象力</h3>
             <p>支持在线打印，导出本地</p>
             <div style="margin-bottom:10px;">
-                <button type="button" class="am-btn am-btn-danger am-btn-sm" id="editBtn">我的方块</button>
+<!--                <button type="button" class="am-btn am-btn-danger am-btn-sm" id="editBtn">我的方块</button>-->
 <!--                <button type="button" class="am-btn am-btn-secondary am-btn-sm" id="demoBtn" data-am-modal="{target: '#cubeDemoDialog',width: 800}">官方推荐</button>-->
-                <button type="button" class="am-btn am-btn-secondary am-hide" id="createBtn">新建</button>
+<!--                <button type="button" class="am-btn am-btn-secondary am-hide" id="createBtn">新建</button>-->
             </div>
         </div>
         <div class="tile">
             <button type="button" id="savePng" class="am-hide">保存图片</button>
-            <button title="方便随时修改" type="button" class="am-btn am-btn-secondary am-btn-block" id="saveBtn" data-url="/user/myfangkuai/?uid=<?php echo $_SESSION['user']['id']; ?>&type=file&dir=<?php echo date('H') . rand(1, 10000);?>">保存到大格科技</button>
+            <button type="button" class="am-btn am-btn-danger am-btn-block" id="saveAndPrintBtn" data-url="/swf/model/?type=3">保存到大格科技</button>
+<!--            <button title="方便随时修改" type="button" class="am-btn am-btn-secondary am-btn-block" id="saveBtn" data-url="/user/myfangkuai/?uid=--><?php //echo $_SESSION['user']['id']; ?><!--&type=file&dir=--><?php //echo date('H') . rand(1, 10000);?><!--">保存到大格科技</button>-->
             <button type="button" class="am-btn am-btn-success am-btn-block" id="exportStl">导出STL</button>
-            <button type="button" class="am-btn am-btn-danger am-btn-block" id="saveAndPrintBtn" data-url="/swf/model/?type=3">在线打印</button>
+<!--            <button type="button" class="am-btn am-btn-danger am-btn-block" id="saveAndPrintBtn" data-url="/swf/model/?type=3">在线打印</button>-->
 
 
         </div>
@@ -203,7 +202,7 @@
 
     function Load()
     {
-        showWelcome();
+        //showWelcome();
         window.onresize = Resize;
         Resize();
 
@@ -227,39 +226,6 @@
         });
 
 
-        $(document).on('submit', '#loginDialog form', function () {
-            $.ajax({
-                url: $(this).attr('action'),
-                data: $(this).serialize(),
-                type: 'POST',
-                dataType: 'json',
-                success: function (obj) {
-                    if (obj.code != 0) {
-                        isLogin = 0;
-                        alert(obj.msg);
-                    } else {
-                        isLogin = 1;
-                        loadCubeList();
-                        $('#loginDialog').modal('close');
-
-                        if (showCube) {
-                            $('#cubeDialog').modal('open');
-                        }
-                        if (showOnline) {
-                            $('#saveAndPrintBtn').trigger('click');
-                        }
-                        showCube = false;
-                        showOnline = false;
-                        console.log(obj);
-                    }
-                },
-                error: function (XHR) {
-                    isLogin = 0;
-                    alert(XHR.responseText);
-                }
-            });
-            return false;
-        });
         $(document).on('click', '.setColorBtn', function () {
             $('.color-box-content a').removeClass('am-active');
             $(this).parent().addClass('am-active');
@@ -349,6 +315,12 @@
                 alert("请先添加方块");
                 return false;
             }
+
+            if(!isLogin){
+                $('#loginDialog').modal();
+                return false;
+            }
+
             var fd = new FormData();
             var fileName = "方块堆积";
             fd.append('name', fileName);
@@ -396,11 +368,9 @@
 //                    a.setAttribute("id", "openwin");
 //                    document.body.appendChild(a);
 //                    a.click();
-                    location.href='/apps/print#'+this.responseText;
+                    alert('保存成功');
                     //window.open("http://www.dayin.la/apps/print#" + this.responseText);
                 } else {
-                    showOnline = true;
-                    $('#loginDialog').modal();
                     //alert(this.responseText);
                 }
             };
@@ -546,29 +516,32 @@
     };
 
     function loadCubeList() {
-        if (isLogin) {
-            $.ajax({
-                url: '/apps/cubeList?type=1',
-                success: function (obj) {
-                    $('#cubeList')(obj);
-                }
-            });
-        }
+        return false;
+//        if (isLogin) {
+//            $.ajax({
+//                url: '/apps/cubeList?type=1',
+//                success: function (obj) {
+//                    $('#cubeList')(obj);
+//                }
+//            });
+//        }
     }
 
     function loadCubeDemoList() {
-        $.ajax({
-            url: '/apps/cubeDemoList?type=1',
-            success: function (obj) {
-                $('#cubeDemoList')(obj);
-            }
-        });
+        return false;
+//        $.ajax({
+//            url: '/apps/cubeDemoList?type=1',
+//            success: function (obj) {
+//                $('#cubeDemoList')(obj);
+//            }
+//        });
     }
 
 </script>
 <div class="am-modal" tabindex="-1" id="loginDialog">
     <div class="am-modal-dialog">
-        <div class="am-modal-hd am-text-left">登录                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+        <div class="am-modal-hd am-text-left">登录
+            <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
         </div>
         <div class="am-modal-bd am-text-left">
             <form class="am-form" action="/user/login" method="post">
@@ -592,6 +565,4 @@
 <script type="text/javascript" src="/Public/js/cube.min.js?_t=1111111111"></script>
 </body>
 </html>
-<script>
-
-</script>
+<?php $this->load('apps/footer.php');?>

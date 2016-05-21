@@ -58,7 +58,7 @@ margin-right: 5px;
         <li class="thumbnail">
             <div class="model-thumbnail pr">
                 <a class="model-link" href="/list/index/detail/?id=<?php echo $value['id'];?>" title="<?php echo $value['title'];?>" target="_blank">
-                    <img class="cover" src="<?php echo $value['thumb'];?>">
+                    <img class="cover" src="<?php echo ltrim($value['thumb'], '.');?>">
                     <span class="private off"></span>
                 </a>
                 <div class="model-meta">

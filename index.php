@@ -1,7 +1,7 @@
 <?php
-ini_set("display_errors","On");
+//ini_set("display_errors","On");
 ini_set('date.timezone','Asia/Shanghai');
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 define('ROOT', dirname(__FILE__));
 define('VISION', '0.2');
 define('APP',      ROOT . '/lib/app');//action目录

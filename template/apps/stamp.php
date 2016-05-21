@@ -25,9 +25,6 @@
     <![endif]-->
     <script type="text/javascript" src="/Public/static/amazeui/js/amazeui.js"></script>
 </head>
-<script>
-    var isLogin = <?php echo intval($_SESSION['user']['id'])?>;
-</script>
 <body>
 <?php $this->load('apps/header.php');?>
 <style>
@@ -120,7 +117,7 @@
 
         <div class="tile">
             <button type="button" class="am-btn am-btn-primary am-disabled" id="exportStl">导出STL</button>
-            <button class="am-btn am-btn-danger am-disabled" id="saveAndPrintBtn" data-url="/swf/model?type=6">在线打印</button>
+            <button class="am-btn am-btn-danger am-disabled" id="saveAndPrintBtn" data-url="/swf/model?type=6">保存</button>
         </div>
         <div class="tile" style="visibility:hidden">
             <progress id="progressBar" max="100" value="0" ></progress>
@@ -381,6 +378,10 @@
 
         $(document).on('click', '#saveAndPrintBtn', function() {
             //console.log(stlData());return;
+            if(!isLogin){
+                $('#loginDialog').modal();
+                return false;
+            }
             if (!photo.mainMesh) {
                 alert("请先选择照片"); return;
             }
@@ -427,10 +428,10 @@
 //                    a.setAttribute("id", "openwin");
 //                    document.body.appendChild(a);
 //                    a.click();
-                    location.href='/apps/print#'+this.responseText;
+                    alert('保存成功');
                     //window.open("http://www.dayin.la/apps/print#" + this.responseText);
                 } else {
-                    alert(this.responseText);
+                    alert('保存失败,请刷新');
                 }
             };
             xhr.upload.onerror = function(status, statusText){
@@ -556,3 +557,4 @@
 <script type="text/javascript" src="/Public/js/threejs/stamp.min.js?_t=2222"></script>
 </body>
 </html>
+<?php $this->load('apps/footer.php');?>
